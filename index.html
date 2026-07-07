@@ -18,23 +18,19 @@ html{scroll-behavior:smooth;scroll-padding-top:100px;}
 body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);}
 h1,h2,h3,.brand{font-family:'Montserrat',Arial,sans-serif;}
 
-/* ---- Top bar ---- */
 .topbar{background:var(--navy);color:#fff;padding:18px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;position:sticky;top:0;z-index:50;box-shadow:0 2px 10px rgba(0,0,0,.15);}
 .brand{display:flex;flex-direction:column;}
 .brand .b1{font-weight:800;letter-spacing:.03em;font-size:15px;color:#fff;}
 .brand .b2{font-weight:600;font-size:22px;color:var(--gold);margin-top:2px;}
 .brand .b3{font-size:12px;color:#CBD6E6;margin-top:2px;}
-.topbar-actions{display:flex;gap:10px;flex-wrap:wrap;}
+.topbar-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
 .mgl-btn{border:none;border-radius:8px;padding:9px 14px;font-size:13px;font-weight:700;cursor:pointer;transition:transform .08s ease, box-shadow .08s ease;}
 .mgl-btn:active{transform:translateY(1px);}
 .mgl-btn-ghost{background:rgba(255,255,255,.12);color:#fff;}
 .mgl-btn-ghost:hover{background:rgba(255,255,255,.22);}
 .mgl-btn-orange{background:var(--orange);color:#fff;}
 .mgl-btn-orange:hover{box-shadow:0 4px 14px rgba(240,93,36,.4);}
-.mgl-btn-danger{background:transparent;color:#FFC9C0;border:1px solid rgba(255,255,255,.3);}
-.mgl-btn-danger:hover{background:rgba(229,57,53,.25);}
 
-/* ---- Dashboard summary strip (signature element) ---- */
 .dashboard{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:20px 28px;background:linear-gradient(180deg,#0B3A73 0%, #052A57 100%);}
 .dcard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:12px;}
 .dcard .dot{width:22px;height:22px;border-radius:50%;flex:none;box-shadow:inset 0 -3px 6px rgba(0,0,0,.25), 0 0 10px currentColor;}
@@ -47,7 +43,6 @@ h1,h2,h3,.brand{font-family:'Montserrat',Arial,sans-serif;}
 .progress-track{height:8px;border-radius:6px;background:rgba(255,255,255,.15);margin:0 28px 20px 28px;overflow:hidden;display:flex;}
 .progress-track div{height:100%;}
 
-/* ---- Layout ---- */
 .layout{display:grid;grid-template-columns:230px 1fr;gap:0;max-width:1500px;margin:0 auto;}
 .sidenav{position:sticky;top:150px;align-self:start;padding:24px 14px;height:calc(100vh - 150px);overflow-y:auto;}
 .sidenav .nav-title{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:0 10px 8px;font-weight:700;}
@@ -56,14 +51,12 @@ h1,h2,h3,.brand{font-family:'Montserrat',Arial,sans-serif;}
 .mgl-nav-link.active{background:var(--orange);color:#fff;}
 .main{padding:24px 28px 80px;min-width:0;}
 
-/* ---- Cards / sections ---- */
 .mgl-card{background:var(--mgl-card);border:1px solid var(--border);border-radius:14px;padding:26px 28px;margin-bottom:26px;box-shadow:0 1px 3px rgba(16,24,40,.04);scroll-margin-top:100px;}
 .mgl-card-title{color:var(--navy);font-size:21px;font-weight:800;margin:0 0 6px;}
 .owners{color:var(--orange);font-weight:700;font-size:13.5px;margin:0 0 14px;}
 .mgl-lead{color:var(--muted);font-size:14px;line-height:1.55;margin:0 0 14px;}
 .note{background:#FFF7E8;border-left:4px solid var(--gold);padding:10px 14px;border-radius:6px;color:#6b5013;font-size:13.5px;margin:0 0 16px;}
 
-/* ---- Tables ---- */
 .table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:10px;}
 table.grid{width:100%;border-collapse:collapse;font-size:13.5px;min-width:900px;}
 table.grid thead th{background:var(--navy);color:#fff;text-align:left;padding:12px 14px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;position:sticky;top:0;}
@@ -87,7 +80,6 @@ table.grid-plain tbody td{font-size:13.5px;}
 .mgl-badge-uat{background:var(--uat-border);color:#0d3a63;}
 .mgl-badge-acct{background:var(--acct-border);color:#3a1f75;}
 
-/* ---- Traffic light ---- */
 .light{width:26px;height:26px;border-radius:50%;border:2px solid rgba(0,0,0,.15);cursor:pointer;background:var(--red);box-shadow:inset 0 -3px 5px rgba(0,0,0,.2);transition:transform .12s ease;}
 .light:hover{transform:scale(1.12);}
 .light:focus-visible{outline:3px solid var(--gold);outline-offset:2px;}
@@ -99,9 +91,9 @@ table.grid-plain tbody td{font-size:13.5px;}
 
 input.comment{width:100%;min-width:180px;border:1px solid var(--border);border-radius:7px;padding:7px 9px;font-size:13px;font-family:inherit;background:#fff;}
 input.comment:focus{outline:2px solid var(--gold);border-color:var(--gold);}
-input.comment.saved-flash{background:#FFF9E5;}
+input.comment.saved-flash{background:#E9F8ED;}
+input.comment.save-error{background:#FDECEA;border-color:var(--red);}
 
-/* ---- Section 9 hypercare list ---- */
 .hc-static{background:#F2F5F9;border-radius:10px;padding:14px 16px;font-size:13.5px;color:var(--muted);margin-bottom:16px;}
 .hc-static strong{color:var(--navy);}
 .hc-list{display:flex;flex-direction:column;gap:12px;}
@@ -111,6 +103,11 @@ input.comment.saved-flash{background:#FFF9E5;}
 .hc-desc{font-size:13.3px;color:var(--muted);line-height:1.5;margin-bottom:8px;}
 .comment-inline{max-width:480px;}
 
+.state-msg{padding:40px 28px;text-align:center;color:var(--muted);font-size:15px;}
+.state-msg strong{color:var(--navy);display:block;font-size:17px;margin-bottom:8px;font-family:'Montserrat',Arial,sans-serif;}
+.spinner{width:34px;height:34px;border:4px solid #E3E6EA;border-top-color:var(--orange);border-radius:50%;margin:0 auto 16px;animation:spin .8s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
 footer{max-width:1500px;margin:0 auto;padding:10px 28px 50px;color:var(--muted);font-size:12px;}
 
 @media (max-width: 980px){
@@ -119,11 +116,8 @@ footer{max-width:1500px;margin:0 auto;padding:10px 28px 50px;color:var(--muted);
   .nav-title{display:none;}
   .dashboard{grid-template-columns:repeat(2,1fr);}
 }
-@media (prefers-reduced-motion: reduce){
-  *{transition:none !important;}
-}
+@media (prefers-reduced-motion: reduce){ *{transition:none !important;} .spinner{animation:none;} }
 
-/* ---- Print / Export to PDF ---- */
 .comment-print-text{display:none;}
 @media print{
   * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
@@ -145,7 +139,6 @@ footer{max-width:1500px;margin:0 auto;padding:10px 28px 50px;color:var(--muted);
   @page{ margin: 14mm; }
 }
 
-/* ---- Edit lock ---- */
 .lock-pill{font-size:12px;font-weight:700;padding:8px 12px;border-radius:20px;background:rgba(255,255,255,.1);color:#CBD6E6;}
 .lock-pill.locked{background:rgba(229,57,53,.18);color:#FFC9C0;}
 .lock-pill.unlocked{background:rgba(46,158,74,.22);color:#B9F0C6;}
@@ -155,8 +148,8 @@ body.locked .light{cursor:not-allowed;opacity:.55;}
 body.locked .light:hover{transform:none;}
 body.locked input.comment{background:#F1F2F4;color:#8A8F98;cursor:not-allowed;}
 body.unlocked .light{box-shadow:inset 0 -3px 5px rgba(0,0,0,.2), 0 0 0 3px rgba(245,178,27,.25);}
+.sync-note{font-size:11px;color:#CBD6E6;}
 
-/* ---- Module breakdown dashboard ---- */
 .module-dashboard{background:linear-gradient(180deg,#fff, #FAFBFC);}
 .mgrid{display:grid;grid-template-columns:repeat(auto-fit, minmax(210px,1fr));gap:14px;}
 .mcard{border:1px solid var(--border);border-radius:12px;padding:14px 16px;background:#fff;}
@@ -173,32 +166,28 @@ body.unlocked .light{box-shadow:inset 0 -3px 5px rgba(0,0,0,.2), 0 0 0 3px rgba(
 .mbar-fill{height:100%;display:flex;}
 </style>
 </head>
-<body>
+<body class="locked">
 
 <div class="topbar">
   <div class="brand">
     <span class="b1">GOLDEN SUNTEC SOLUTIONS</span>
     <span class="b2">MACAS Go-Live Dashboard</span>
-    <span class="b3">GSS-PRJ-2502-0001 &middot; Updated July 6, 2026 (v6 &rarr; web)</span>
+    <span class="b3">GSS-PRJ-2502-0001 &middot; Live data from Google Sheet</span>
   </div>
   <div class="topbar-actions">
+    <span id="sync-note" class="sync-note"></span>
+    <button class="mgl-btn mgl-btn-ghost" id="mgl-btn-refresh">&#8635; Refresh</button>
     <button class="mgl-btn mgl-btn-orange" id="mgl-btn-print">&#128424; Export to PDF</button>
     <span id="lock-status" class="lock-pill locked">&#128274; View only</span>
     <button class="mgl-btn mgl-btn-orange" id="mgl-btn-edit">&#128273; Edit</button>
-    <button class="mgl-btn mgl-btn-ghost" id="mgl-btn-export">&#8681; Export backup</button>
-    <label class="mgl-btn mgl-btn-ghost" id="label-import" style="cursor:pointer;">
-      &#8593; Import backup
-      <input type="file" id="file-import" accept="application/json" style="display:none;">
-    </label>
-    <button class="mgl-btn mgl-btn-danger" id="mgl-btn-reset">Reset all</button>
   </div>
 </div>
 
 <div class="dashboard">
-  <div class="dcard red"><div class="dot"></div><div><div class="dnum" id="dnum-red">0</div><div class="dlabel">Not started</div></div></div>
-  <div class="dcard yellow"><div class="dot"></div><div><div class="dnum" id="dnum-yellow">0</div><div class="dlabel">Ongoing</div></div></div>
-  <div class="dcard green"><div class="dot"></div><div><div class="dnum" id="dnum-green">0</div><div class="dlabel">Done</div></div></div>
-  <div class="dcard gray"><div class="dot"></div><div><div class="dnum" id="dnum-gray">0</div><div class="dlabel">Not needed</div></div></div>
+  <div class="dcard red"><div class="dot"></div><div><div class="dnum" id="dnum-red">–</div><div class="dlabel">Not started</div></div></div>
+  <div class="dcard yellow"><div class="dot"></div><div><div class="dnum" id="dnum-yellow">–</div><div class="dlabel">Ongoing</div></div></div>
+  <div class="dcard green"><div class="dot"></div><div><div class="dnum" id="dnum-green">–</div><div class="dlabel">Done</div></div></div>
+  <div class="dcard gray"><div class="dot"></div><div><div class="dnum" id="dnum-gray">–</div><div class="dlabel">Not needed</div></div></div>
 </div>
 <div class="progress-track" id="progress-track"></div>
 
@@ -207,1266 +196,310 @@ body.unlocked .light{box-shadow:inset 0 -3px 5px rgba(0,0,0,.2), 0 0 0 3px rgba(
     <div class="nav-title">Jump to section</div>
     <a href="#module-breakdown" class="mgl-nav-link">Module Breakdown</a>
     <a href="#cal" class="mgl-nav-link">1. Go-Live Calendar</a>
-<a href="#sec2" class="mgl-nav-link">2. Sales &amp; CRM</a>
-<a href="#sec3" class="mgl-nav-link">3. Inventory</a>
-<a href="#sec4" class="mgl-nav-link">4. Payments &amp; Journal</a>
-<a href="#sec5" class="mgl-nav-link">5. Logistics &amp; Dispatch</a>
-<a href="#sec6" class="mgl-nav-link">6. Purchase</a>
-<a href="#sec7" class="mgl-nav-link">7. Maintenance</a>
-<a href="#sec8" class="mgl-nav-link">8. Production</a>
-<a href="#sec9" class="mgl-nav-link">9. Hypercare Prep</a>
-<a href="#sec10" class="mgl-nav-link">10. QA Cadence Summary</a>
-<a href="#sec11" class="mgl-nav-link">11. UAT Alignment</a>
-<a href="#sec12" class="mgl-nav-link">12. Deliverable Matrix</a>
+    <a href="#sec2" class="mgl-nav-link">2. Sales &amp; CRM</a>
+    <a href="#sec3" class="mgl-nav-link">3. Inventory</a>
+    <a href="#sec4" class="mgl-nav-link">4. Payments &amp; Journal</a>
+    <a href="#sec5" class="mgl-nav-link">5. Logistics &amp; Dispatch</a>
+    <a href="#sec6" class="mgl-nav-link">6. Purchase</a>
+    <a href="#sec7" class="mgl-nav-link">7. Maintenance</a>
+    <a href="#sec8" class="mgl-nav-link">8. Production</a>
+    <a href="#sec9" class="mgl-nav-link">9. Hypercare Prep</a>
+    <a href="#sec10" class="mgl-nav-link">10. QA Cadence Summary</a>
+    <a href="#sec11" class="mgl-nav-link">11. UAT Alignment</a>
+    <a href="#sec12" class="mgl-nav-link">12. Deliverable Matrix</a>
   </nav>
   <main class="main">
-    
-<section class="mgl-card module-dashboard" id="module-breakdown">
-  <h2 class="mgl-card-title">Module Breakdown</h2>
-  <p class="mgl-lead">Status counts per module &mdash; Red / Yellow / Green / Gray, updated live as lights are toggled.</p>
-  <div class="mgrid">
-      <div class="mcard" data-module-mgl-card="sales">
-        <div class="mcard-head">Sales &amp; CRM</div>
-        <div class="mcard-body">
-          <div class="mstat mred"><span class="mdot"></span><span class="mval" data-m="sales" data-c="red">0</span></div>
-          <div class="mstat myellow"><span class="mdot"></span><span class="mval" data-m="sales" data-c="yellow">0</span></div>
-          <div class="mstat mgreen"><span class="mdot"></span><span class="mval" data-m="sales" data-c="green">0</span></div>
-          <div class="mstat mgray"><span class="mdot"></span><span class="mval" data-m="sales" data-c="gray">0</span></div>
-          <div class="mtotal">of <span data-m="sales" data-c="total">0</span></div>
-        </div>
-        <div class="mbar"><div class="mbar-fill" data-m="sales"></div></div>
-      </div>
-      <div class="mcard" data-module-mgl-card="inventory">
-        <div class="mcard-head">Inventory</div>
-        <div class="mcard-body">
-          <div class="mstat mred"><span class="mdot"></span><span class="mval" data-m="inventory" data-c="red">0</span></div>
-          <div class="mstat myellow"><span class="mdot"></span><span class="mval" data-m="inventory" data-c="yellow">0</span></div>
-          <div class="mstat mgreen"><span class="mdot"></span><span class="mval" data-m="inventory" data-c="green">0</span></div>
-          <div class="mstat mgray"><span class="mdot"></span><span class="mval" data-m="inventory" data-c="gray">0</span></div>
-          <div class="mtotal">of <span data-m="inventory" data-c="total">0</span></div>
-        </div>
-        <div class="mbar"><div class="mbar-fill" data-m="inventory"></div></div>
-      </div>
-      <div class="mcard" data-module-mgl-card="payments">
-        <div class="mcard-head">Payments &amp; Journal</div>
-        <div class="mcard-body">
-          <div class="mstat mred"><span class="mdot"></span><span class="mval" data-m="payments" data-c="red">0</span></div>
-          <div class="mstat myellow"><span class="mdot"></span><span class="mval" data-m="payments" data-c="yellow">0</span></div>
-          <div class="mstat mgreen"><span class="mdot"></span><span class="mval" data-m="payments" data-c="green">0</span></div>
-          <div class="mstat mgray"><span class="mdot"></span><span class="mval" data-m="payments" data-c="gray">0</span></div>
-          <div class="mtotal">of <span data-m="payments" data-c="total">0</span></div>
-        </div>
-        <div class="mbar"><div class="mbar-fill" data-m="payments"></div></div>
-      </div>
-      <div class="mcard" data-module-mgl-card="logistics">
-        <div class="mcard-head">Logistics &amp; Dispatch</div>
-        <div class="mcard-body">
-          <div class="mstat mred"><span class="mdot"></span><span class="mval" data-m="logistics" data-c="red">0</span></div>
-          <div class="mstat myellow"><span class="mdot"></span><span class="mval" data-m="logistics" data-c="yellow">0</span></div>
-          <div class="mstat mgreen"><span class="mdot"></span><span class="mval" data-m="logistics" data-c="green">0</span></div>
-          <div class="mstat mgray"><span class="mdot"></span><span class="mval" data-m="logistics" data-c="gray">0</span></div>
-          <div class="mtotal">of <span data-m="logistics" data-c="total">0</span></div>
-        </div>
-        <div class="mbar"><div class="mbar-fill" data-m="logistics"></div></div>
-      </div>
-      <div class="mcard" data-module-mgl-card="purchase">
-        <div class="mcard-head">Purchase</div>
-        <div class="mcard-body">
-          <div class="mstat mred"><span class="mdot"></span><span class="mval" data-m="purchase" data-c="red">0</span></div>
-          <div class="mstat myellow"><span class="mdot"></span><span class="mval" data-m="purchase" data-c="yellow">0</span></div>
-          <div class="mstat mgreen"><span class="mdot"></span><span class="mval" data-m="purchase" data-c="green">0</span></div>
-          <div class="mstat mgray"><span class="mdot"></span><span class="mval" data-m="purchase" data-c="gray">0</span></div>
-          <div class="mtotal">of <span data-m="purchase" data-c="total">0</span></div>
-        </div>
-        <div class="mbar"><div class="mbar-fill" data-m="purchase"></div></div>
-      </div>
-      <div class="mcard" data-module-mgl-card="maintenance">
-        <div class="mcard-head">Maintenance</div>
-        <div class="mcard-body">
-          <div class="mstat mred"><span class="mdot"></span><span class="mval" data-m="maintenance" data-c="red">0</span></div>
-          <div class="mstat myellow"><span class="mdot"></span><span class="mval" data-m="maintenance" data-c="yellow">0</span></div>
-          <div class="mstat mgreen"><span class="mdot"></span><span class="mval" data-m="maintenance" data-c="green">0</span></div>
-          <div class="mstat mgray"><span class="mdot"></span><span class="mval" data-m="maintenance" data-c="gray">0</span></div>
-          <div class="mtotal">of <span data-m="maintenance" data-c="total">0</span></div>
-        </div>
-        <div class="mbar"><div class="mbar-fill" data-m="maintenance"></div></div>
-      </div>
-      <div class="mcard" data-module-mgl-card="production">
-        <div class="mcard-head">Production</div>
-        <div class="mcard-body">
-          <div class="mstat mred"><span class="mdot"></span><span class="mval" data-m="production" data-c="red">0</span></div>
-          <div class="mstat myellow"><span class="mdot"></span><span class="mval" data-m="production" data-c="yellow">0</span></div>
-          <div class="mstat mgreen"><span class="mdot"></span><span class="mval" data-m="production" data-c="green">0</span></div>
-          <div class="mstat mgray"><span class="mdot"></span><span class="mval" data-m="production" data-c="gray">0</span></div>
-          <div class="mtotal">of <span data-m="production" data-c="total">0</span></div>
-        </div>
-        <div class="mbar"><div class="mbar-fill" data-m="production"></div></div>
-      </div>
-      <div class="mcard" data-module-mgl-card="hypercare">
-        <div class="mcard-head">Hypercare Prep (Sec.9)</div>
-        <div class="mcard-body">
-          <div class="mstat mred"><span class="mdot"></span><span class="mval" data-m="hypercare" data-c="red">0</span></div>
-          <div class="mstat myellow"><span class="mdot"></span><span class="mval" data-m="hypercare" data-c="yellow">0</span></div>
-          <div class="mstat mgreen"><span class="mdot"></span><span class="mval" data-m="hypercare" data-c="green">0</span></div>
-          <div class="mstat mgray"><span class="mdot"></span><span class="mval" data-m="hypercare" data-c="gray">0</span></div>
-          <div class="mtotal">of <span data-m="hypercare" data-c="total">0</span></div>
-        </div>
-        <div class="mbar"><div class="mbar-fill" data-m="hypercare"></div></div>
-      </div>
-      <div class="mcard" data-module-mgl-card="qacadence">
-        <div class="mcard-head">QA Cadence (Sec.10)</div>
-        <div class="mcard-body">
-          <div class="mstat mred"><span class="mdot"></span><span class="mval" data-m="qacadence" data-c="red">0</span></div>
-          <div class="mstat myellow"><span class="mdot"></span><span class="mval" data-m="qacadence" data-c="yellow">0</span></div>
-          <div class="mstat mgreen"><span class="mdot"></span><span class="mval" data-m="qacadence" data-c="green">0</span></div>
-          <div class="mstat mgray"><span class="mdot"></span><span class="mval" data-m="qacadence" data-c="gray">0</span></div>
-          <div class="mtotal">of <span data-m="qacadence" data-c="total">0</span></div>
-        </div>
-        <div class="mbar"><div class="mbar-fill" data-m="qacadence"></div></div>
-      </div>
-      <div class="mcard" data-module-mgl-card="deliverable">
-        <div class="mcard-head">Deliverable Matrix (Sec.12)</div>
-        <div class="mcard-body">
-          <div class="mstat mred"><span class="mdot"></span><span class="mval" data-m="deliverable" data-c="red">0</span></div>
-          <div class="mstat myellow"><span class="mdot"></span><span class="mval" data-m="deliverable" data-c="yellow">0</span></div>
-          <div class="mstat mgreen"><span class="mdot"></span><span class="mval" data-m="deliverable" data-c="green">0</span></div>
-          <div class="mstat mgray"><span class="mdot"></span><span class="mval" data-m="deliverable" data-c="gray">0</span></div>
-          <div class="mtotal">of <span data-m="deliverable" data-c="total">0</span></div>
-        </div>
-        <div class="mbar"><div class="mbar-fill" data-m="deliverable"></div></div>
-      </div>
-  </div>
-</section>
-    
-<section class="mgl-card" id="cal">
-  <h2 class="mgl-card-title">1. Purpose & Go-Live Calendar</h2>
-  <p class="mgl-lead">This dashboard consolidates module-specific pre-go-live activities, deliverable evidence criteria, data validation/QA activities, and GS-side special readiness/hypercare preparation for the MACAS phased go-live sequence. Dates are confirmed from the live Project Plan as of July 6, 2026.</p>
-  <p class="mgl-lead">Tap a status light to cycle it: <strong style="color:#E53935">Red</strong> (not yet started) &rarr; <strong style="color:#F5A623">Yellow</strong> (ongoing) &rarr; <strong style="color:#2E9E4A">Green</strong> (done) &rarr; <strong style="color:#8A8F98">Gray</strong> (not needed) &rarr; back to Red. Comments and status are saved automatically in this browser.</p>
-  
-    <div class="table-wrap">
-    <table class="grid grid-plain">
-      <thead><tr><th>Wave</th><th>Module(s)</th><th>Dates (per Project Plan)</th></tr></thead>
-      <tbody><tr><td>1</td><td>Sales &amp; CRM (4.3.1) / Inventory (4.3.2)</td><td>Jul 7 – 10</td></tr><tr><td>2</td><td>Payments→Journal (4.3.3) / Logistics (4.3.4)</td><td>Jul 13 – 16</td></tr><tr><td>3</td><td>Purchase (4.3.5)</td><td>Jul 17 – 22</td></tr><tr><td>4</td><td>Maintenance (4.3.6) / Production (4.3.7)</td><td>Jul 23 – 28</td></tr><tr><td>—</td><td>Go-Live Support Window (4.4, Angel Abraham)</td><td>Jul 7 – 28</td></tr><tr><td>—</td><td>Post-Implementation Review (4.5)</td><td>Jul 29 – 31</td></tr></tbody>
-    </table>
+    <section class="mgl-card module-dashboard" id="module-breakdown">
+      <h2 class="mgl-card-title">Module Breakdown</h2>
+      <p class="mgl-lead">Status counts per module &mdash; Red / Yellow / Green / Gray, updated live as lights are toggled.</p>
+      <div class="mgrid" id="mgrid"></div>
+    </section>
+    <div id="sections-root">
+      <div class="mgl-card"><div class="state-msg"><div class="spinner"></div><strong>Loading dashboard&hellip;</strong>Reading the latest statuses from the Google Sheet.</div></div>
     </div>
-</section>
-<section class="mgl-card" id="sec2">
-  <h2 class="mgl-card-title">2. Sales &amp; CRM — Pre-Go-Live Activities (Jul 7–10)</h2>
-  <p class="owners">GS Owner: Mika Calma/Gomo &nbsp;|&nbsp; MACAS Counterpart: Bong (Renato Legaspi)</p>
-  <p class="note">Resolved per UAT MOM precedence: standard Odoo sequence numbering confirmed working (Jun 17) &mdash; supersedes the earlier CRM-workaround framing.</p>
-  
-    <div class="table-wrap">
-    <table class="grid" id="t2">
-      <thead><tr>
-        <th class="light-cell">Status</th>
-        <th class="col-activity">Activity</th>
-        <th class="col-status">Status as of Jul 6</th>
-        <th class="col-owner">Owner / Respondent</th>
-        <th class="col-dates">Inclusive Dates</th>
-        <th class="col-comment">Comments</th>
-      </tr></thead>
-      <tbody>
-      <tr data-id="s2-1" data-module="sales" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Confirm quotation numbering approach</td>
-        <td class="col-status">RESOLVED per UAT MOM (Jun 17): standard Odoo sequence confirmed in place and working correctly for quotation→SO conversion. Formal written price list still pending submission separately (see next row).</td>
-        <td class="col-owner">Bong / Mika</td>
-        <td class="col-dates">Jun 17 (Closed per UAT MOM)</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s2-1" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s2-2" data-module="sales" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Finalize price list and document templates</td>
-        <td class="col-status">Price list authority confirmed (Bong owns entries; CF approves revisions). Formal written price list still pending.</td>
-        <td class="col-owner">Bong / Mika</td>
-        <td class="col-dates">Jul 1 – Jul 7</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s2-2" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s2-3" data-module="sales" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Confirm VAT treatment on aggregate vs. delivery-fee lines (SO0005 precedent)</td>
-        <td class="col-status">New gap surfaced Jul 4–6: live SO 001568 (Pickup, PGENRO DR 1295776) shows ₱0.00 tax. Pickup-vs-Delivery VAT policy not yet confirmed.</td>
-        <td class="col-owner">Bong / Ana Pablo (CF)</td>
-        <td class="col-dates">Jul 4 – Jul 10</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s2-3" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s2-4" data-module="sales" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Resolve duplicate “3/4” product naming</td>
-        <td class="col-status">Confirmed: two separate “3/4” products caused a wrong-selection error (Raymagean, Jul 4). Needs master-data cleanup.</td>
-        <td class="col-owner">Enzo / Bong (⚠ verify owner)</td>
-        <td class="col-dates">Jul 4 – Jul 8</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s2-4" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s2-5" data-module="sales" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Confirm quotation cancel/permission rights for front-line Sales users</td>
-        <td class="col-status">Raymagean has no Cancel option; Enzo cancelled on her behalf with Japs&#x27; documented approval as a one-off. Formal RBAC decision still needed.</td>
-        <td class="col-owner">Japs / Bong</td>
-        <td class="col-dates">Jul 4 – Jul 10</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s2-5" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s2-6" data-module="sales" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Live parallel encoding of confirmed Sales Orders (per truckload)</td>
-        <td class="col-status">Underway — Mika directed Raymagean to begin Jul 1, encoding same-day transactions the next day.</td>
-        <td class="col-owner">Raymagean</td>
-        <td class="col-dates">Jul 1 – Jul 10</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s2-6" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s2-7" data-module="sales" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">User access / login validation</td>
-        <td class="col-status">Resolved — recurring “Invalid signup token” issue fixed via resend invitation.</td>
-        <td class="col-owner">Enzo (Lorenzo Alagao)</td>
-        <td class="col-dates">Jul 1 – Jul 2 (Closed)</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s2-7" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s2-8" data-module="sales" class="row-qa">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-qa">&#10022; QA</span>Report-based validation: run VAT / Non-VAT / Consolidated Sales Report at least twice within the go-live window</td>
-        <td class="col-status">Merged from Data Validation &amp; QA set (Item A).</td>
-        <td class="col-owner">Mika / Bong</td>
-        <td class="col-dates">Jul 7 – Jul 10 (2x)</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s2-8" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s2-9" data-module="sales" class="row-qa">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-qa">&#10022; QA</span>Parallel reconciliation: Odoo Sales report vs. Excel SO tracking sheet</td>
-        <td class="col-status">Merged (Item B). Twice within the window; conditional on MACAS still running the Excel SO tracker.</td>
-        <td class="col-owner">Mika / Bong</td>
-        <td class="col-dates">Jul 7 – Jul 10 (2x)</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s2-9" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s2-10" data-module="sales" class="row-qa">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-qa">&#10022; QA</span>Master data audit: product catalog duplicates, customer TIN completeness</td>
-        <td class="col-status">Merged (Item C). Covers the confirmed “3/4” duplicate and blank-TIN gap on customer JPB.</td>
-        <td class="col-owner">Mika / Enzo</td>
-        <td class="col-dates">Jul 6 – Jul 8</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s2-10" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      </tbody>
-    </table>
-    </div>
-</section>
-<section class="mgl-card" id="sec3">
-  <h2 class="mgl-card-title">3. Inventory — Pre-Go-Live Activities (Jul 7–10)</h2>
-  <p class="owners">GS Owner: Enzo (Lorenzo Alagao) &nbsp;|&nbsp; MACAS Counterpart: Sulpicio Casil</p>
-  
-  
-    <div class="table-wrap">
-    <table class="grid" id="t3">
-      <thead><tr>
-        <th class="light-cell">Status</th>
-        <th class="col-activity">Activity</th>
-        <th class="col-status">Status as of Jul 6</th>
-        <th class="col-owner">Owner / Respondent</th>
-        <th class="col-dates">Inclusive Dates</th>
-        <th class="col-comment">Comments</th>
-      </tr></thead>
-      <tbody>
-      <tr data-id="s3-1" data-module="inventory" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Stockpile location setup (names, hierarchy, parent-child structure)</td>
-        <td class="col-status">MACAS input needed. UAT MOM Action #5 confirms this remains outstanding — MACAS to provide full location list.</td>
-        <td class="col-owner">Sulpicio / Enzo</td>
-        <td class="col-dates">Jul 1 – Jul 7</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s3-1" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s3-2" data-module="inventory" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Initial quantity / opening balance estimates per product</td>
-        <td class="col-status">Sulpicio directed (Jul 4, via Arman Romero) to begin simulating on-hand finished-product counts. UAT MOM Action #8: best-available operational estimates, not dummy values.</td>
-        <td class="col-owner">Sulpicio / Arman Romero</td>
-        <td class="col-dates">Jul 4 – Jul 10</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s3-2" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s3-3" data-module="inventory" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Group all aggregate products into one category</td>
-        <td class="col-status">Requested by Sulpicio (Jul 4) to simplify on-hand count entry.</td>
-        <td class="col-owner">Enzo</td>
-        <td class="col-dates">Jul 4 – Jul 6</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s3-3" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s3-4" data-module="inventory" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Grant Sulpicio modify access for on-hand inventory input</td>
-        <td class="col-status">Requested Jul 4; Enzo confirmed access appears already granted — needs final confirmation.</td>
-        <td class="col-owner">Enzo</td>
-        <td class="col-dates">Jul 4 – Jul 5</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s3-4" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s3-5" data-module="inventory" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Opening balances loaded and reconciled in production (deliverable evidence)</td>
-        <td class="col-status">Not yet confirmed complete. Formal deliverable criterion for Task 4.3.2.</td>
-        <td class="col-owner">Sulpicio / Enzo</td>
-        <td class="col-dates">Jul 7 – Jul 10</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s3-5" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s3-6" data-module="inventory" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Configure automatic volume-to-weight conversion per product</td>
-        <td class="col-status">NEW — UAT MOM Action #7. Requires per-product density factors; flagged as the one item in the whole project likely needing custom Studio computation (not pure standard config).</td>
-        <td class="col-owner">Enzo / Japs</td>
-        <td class="col-dates">Jun 18 – Jul 7 (⚠ CRITICAL – Studio build)</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s3-6" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s3-7" data-module="inventory" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Document and test Manufacturing Order workaround for material downgrading (e.g., 3/4 stone → Base Course)</td>
-        <td class="col-status">NEW — UAT MOM Action #9. Include in user training materials.</td>
-        <td class="col-owner">Enzo</td>
-        <td class="col-dates">Jun 18 – Jul 7</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s3-7" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s3-8" data-module="inventory" class="row-qa">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-qa">&#10022; QA</span>Report-based validation: Inventory Valuation / Stock Moves report, at least twice within the window</td>
-        <td class="col-status">Merged (Item A). Cross-checks Sulpicio&#x27;s manual counts against system movements; would also surface the duplicate “3/4” product as split stock records.</td>
-        <td class="col-owner">Enzo / Sulpicio</td>
-        <td class="col-dates">Jul 7 – Jul 10 (2x)</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s3-8" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s3-9" data-module="inventory" class="row-qa">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-qa">&#10022; QA</span>Master data audit: product catalog duplicates (shared with Sales)</td>
-        <td class="col-status">Merged (Item C). Same audit as Sales section — cross-referenced, not duplicated effort.</td>
-        <td class="col-owner">Enzo</td>
-        <td class="col-dates">Jul 6 – Jul 8</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s3-9" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      </tbody>
-    </table>
-    </div>
-</section>
-<section class="mgl-card" id="sec4">
-  <h2 class="mgl-card-title">4. Payments &amp; Journal — Pre-Go-Live Activities (Jul 13–16)</h2>
-  <p class="owners">GS Owner: Mika Calma/Gomo &nbsp;|&nbsp; MACAS Counterpart: Ana Pablo (CF), Susan Manalo (CF)</p>
-  <p class="note">Checked for alignment against the Accounting Module UAT MOM (v1.0, Jun 24 session). No conflicts found &mdash; purely additive.</p>
-  
-    <div class="table-wrap">
-    <table class="grid" id="t4">
-      <thead><tr>
-        <th class="light-cell">Status</th>
-        <th class="col-activity">Activity</th>
-        <th class="col-status">Status as of Jul 6</th>
-        <th class="col-owner">Owner / Respondent</th>
-        <th class="col-dates">Inclusive Dates</th>
-        <th class="col-comment">Comments</th>
-      </tr></thead>
-      <tbody>
-      <tr data-id="s4-1" data-module="payments" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Configure 4 custom invoice fields: SI No., SI Date, PGENRO, Excel SO Number</td>
-        <td class="col-status">BLOCKER — contingent on CF&#x27;s BIR-registered invoice template, not yet received. Accounting UAT MOM Action #9 confirms the BIR-registered layout/print format is ongoing, to be completed before Jul 13.</td>
-        <td class="col-owner">Ana Pablo (CF) / Japs</td>
-        <td class="col-dates">Ongoing – Jul 13</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s4-1" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s4-2" data-module="payments" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Confirm whether excise tax (NIRC Sec. 151) applies, separate from VAT</td>
-        <td class="col-status">Open question — not yet raised formally with CF.</td>
-        <td class="col-owner">Susan Manalo / Ana Pablo</td>
-        <td class="col-dates">Jul 6 – Jul 13</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s4-2" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s4-3" data-module="payments" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Locate and finalize Accounting UAT Minutes of Proceedings</td>
-        <td class="col-status">RESOLVED — MOM v1.0 provided directly by Japs (Jul 6, 2026).</td>
-        <td class="col-owner">Japs</td>
-        <td class="col-dates">Jun 24 – Jul 6 (Closed)</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s4-3" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s4-4" data-module="payments" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Confirm RBAC approval workflow for CF (cancellations, returns, revisions, alterations)</td>
-        <td class="col-status">Role split direction confirmed and consistent: Susan Manalo owns validation/approval of exceptions, Ana Pablo owns day-to-day AR entries (MACAS-023, reaffirmed in Accounting UAT MOM Section 5.3.1). What remains open is the detailed step-by-step approval workflow on top of this already-agreed split, not the split itself.</td>
-        <td class="col-owner">Susan Manalo</td>
-        <td class="col-dates">Feb 10 – Jul 13</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s4-4" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s4-5" data-module="payments" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Group Payment / Batch Payment workflow validation</td>
-        <td class="col-status">Demonstrated and confirmed during Jun 24 Accounting UAT.</td>
-        <td class="col-owner">Ana Pablo (CF)</td>
-        <td class="col-dates">Jun 24 (Closed)</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s4-5" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s4-6" data-module="payments" class="row-acct">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-acct">&#10022; ACCT-UAT</span>Investigate status of SO 688 (voided, skipped in encoding, or genuinely unrecorded)</td>
-        <td class="col-status">NEW — Accounting UAT MOM Action #1. Missing from both Odoo and MACAS&#x27;s Excel logs; must be resolved before go-live.</td>
-        <td class="col-owner">Ana Pablo / GS</td>
-        <td class="col-dates">Jun 24 – Jul 13</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s4-6" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s4-7" data-module="payments" class="row-acct">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-acct">&#10022; ACCT-UAT</span>Configure a dedicated Check Date field on payment records (Collection Date vs. Clearing Date)</td>
-        <td class="col-status">NEW — Accounting UAT MOM Action #2. Needed for CF&#x27;s cash flow/treasury planning on post-dated checks; assess via Odoo Studio.</td>
-        <td class="col-owner">Mika</td>
-        <td class="col-dates">Jun 24 – Jul 13</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s4-7" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s4-8" data-module="payments" class="row-acct">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-acct">&#10022; ACCT-UAT</span>Resolve duplicate Vuildex / VX customer record (deactivate the empty duplicate)</td>
-        <td class="col-status">NEW — Accounting UAT MOM Action #3. Already caused a reconciliation failure during the session — same pattern as the Sales “3/4” duplicate-product issue.</td>
-        <td class="col-owner">GS / Ana Pablo</td>
-        <td class="col-dates">Jun 24 – Jul 10</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s4-8" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s4-9" data-module="payments" class="row-acct">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-acct">&#10022; ACCT-UAT</span>Assign a Customer Master File Controller; restrict customer-creation rights in RBAC</td>
-        <td class="col-status">NEW — Accounting UAT MOM Action #4. Define role and configure permission level before go-live.</td>
-        <td class="col-owner">MACAS CF / GS</td>
-        <td class="col-dates">Jun 24 – Jul 13</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s4-9" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s4-10" data-module="payments" class="row-acct">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-acct">&#10022; ACCT-UAT</span>Assign Customer Codes as the primary search key for customer records</td>
-        <td class="col-status">NEW — Accounting UAT MOM Action #5. Reduces duplicate risk from name spelling/spacing variations.</td>
-        <td class="col-owner">Mika</td>
-        <td class="col-dates">Jun 24 – Jul 13</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s4-10" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s4-11" data-module="payments" class="row-acct">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-acct">&#10022; ACCT-UAT</span>Confirm and document journal entry treatment for delivery variances (dispatched minus received)</td>
-        <td class="col-status">NEW — Accounting UAT MOM Action #6. Invoicing decision already made (bill on received qty, absorb variance) — the journal entry mechanics still need to be finalized. Required before live invoicing of partial-delivery transactions.</td>
-        <td class="col-owner">Mika / Ana Pablo</td>
-        <td class="col-dates">Jun 24 – Jul 13</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s4-11" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s4-12" data-module="payments" class="row-acct">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-acct">&#10022; ACCT-UAT</span>Configure custom Accounting list view with Item Particulars, Quantity, and Unit Price columns</td>
-        <td class="col-status">NEW — Accounting UAT MOM Action #7. CF requirement for AR reconciliation without switching to the Sales module.</td>
-        <td class="col-owner">Mika</td>
-        <td class="col-dates">Jun 24 – Jul 13</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s4-12" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s4-13" data-module="payments" class="row-acct">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-acct">&#10022; ACCT-UAT</span>Configure and validate Daily Transmittal Report and AR Aging Report print formats</td>
-        <td class="col-status">NEW — Accounting UAT MOM Action #8. Must match CF&#x27;s existing treasury submission templates.</td>
-        <td class="col-owner">Mika</td>
-        <td class="col-dates">Jun 24 – Jul 13</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s4-13" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s4-14" data-module="payments" class="row-acct">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-acct">&#10022; ACCT-UAT</span>Prepare Excel import templates for bulk upload of May–July 2026 transactions</td>
-        <td class="col-status">NEW — Accounting UAT MOM Action #10. Significant data-migration dependency: these months will not be manually re-entered — they will be bulk-imported before go-live to avoid a backlog.</td>
-        <td class="col-owner">Mika</td>
-        <td class="col-dates">Jun 24 – Jul 13 (⚠ CRITICAL – data migration)</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s4-14" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s4-15" data-module="payments" class="row-acct">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-acct">&#10022; ACCT-UAT</span>Complete and validate April 2026 Sales Order data encoding</td>
-        <td class="col-status">NEW — Accounting UAT MOM Action #11. Was still in progress as of the Jun 24 session; re-confirm current status.</td>
-        <td class="col-owner">GS (interns) / Mika</td>
-        <td class="col-dates">Jun 24 – Jul 10 (⚠ verify current status)</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s4-15" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s4-16" data-module="payments" class="row-acct">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-acct">&#10022; ACCT-UAT</span>Decide consolidated vs. separate invoicing preference (per SO vs. combined per customer)</td>
-        <td class="col-status">NEW — explicitly left open in the Accounting UAT MOM as a configurable choice pending CF&#x27;s operational preference; not yet decided.</td>
-        <td class="col-owner">Ana Pablo / Mika</td>
-        <td class="col-dates">Jun 24 – Jul 13</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s4-16" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s4-17" data-module="payments" class="row-acct">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-acct">&#10022; ACCT-UAT</span>Maintain implementation support through MACAS CF&#x27;s office relocation to JHQ</td>
-        <td class="col-status">NEW — Accounting UAT MOM Action #13. Continuity item — ensure the physical office move does not disrupt the Jul 13 go-live.</td>
-        <td class="col-owner">GS Project Team</td>
-        <td class="col-dates">Jul 1 – Jul 16</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s4-17" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s4-18" data-module="payments" class="row-acct">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-acct">&#10022; ACCT-UAT</span>Plan and scope Vendor Bills (Accounts Payable) and Petty Cash Management for next phase</td>
-        <td class="col-status">NEW — Accounting UAT MOM Action #12. Explicitly post-go-live, following Accounting module stabilization — Stage 2 item, included here for completeness only.</td>
-        <td class="col-owner">Mika / Ana Pablo</td>
-        <td class="col-dates">Post-go-live (Stage 2)</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s4-18" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s4-19" data-module="payments" class="row-qa">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-qa">&#10022; QA</span>Report-based validation: Aged Receivables / Cash Receipts Summary, at least twice within the window</td>
-        <td class="col-status">Merged (Item A).</td>
-        <td class="col-owner">Ana Pablo / Mika</td>
-        <td class="col-dates">Jul 13 – Jul 16 (2x)</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s4-19" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s4-20" data-module="payments" class="row-qa">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-qa">&#10022; QA</span>Parallel reconciliation: Odoo Payments report vs. CF&#x27;s Excel monitoring sheet</td>
-        <td class="col-status">Merged (Item B). Twice within the window — CF already maintains a monitoring sheet.</td>
-        <td class="col-owner">Ana Pablo / Mika</td>
-        <td class="col-dates">Jul 13 – Jul 16 (2x)</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s4-20" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      </tbody>
-    </table>
-    </div>
-</section>
-<section class="mgl-card" id="sec5">
-  <h2 class="mgl-card-title">5. Logistics &amp; Dispatch — Pre-Go-Live Activities (Jul 13–16)</h2>
-  <p class="owners">GS Owner: Enzo (Lorenzo Alagao) &nbsp;|&nbsp; MACAS Counterpart: Raymagean Dela Cruz</p>
-  
-  
-    <div class="table-wrap">
-    <table class="grid" id="t5">
-      <thead><tr>
-        <th class="light-cell">Status</th>
-        <th class="col-activity">Activity</th>
-        <th class="col-status">Status as of Jul 6</th>
-        <th class="col-owner">Owner / Respondent</th>
-        <th class="col-dates">Inclusive Dates</th>
-        <th class="col-comment">Comments</th>
-      </tr></thead>
-      <tbody>
-      <tr data-id="s5-1" data-module="logistics" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Delivery routes, vehicle/fleet list, delivery fee structure, driver roster</td>
-        <td class="col-status">UAT MOM Action #24 confirms this remains outstanding despite the dispatch workflow itself being validated live on Day 3.</td>
-        <td class="col-owner">Raymagean</td>
-        <td class="col-dates">Jul 1 – Jul 13</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s5-1" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s5-2" data-module="logistics" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Multi-batch delivery / partial delivery workflow</td>
-        <td class="col-status">Validated as standard Odoo functionality during earlier UAT cycles; reaffirmed via live worked example (25 cu.m. ordered vs. 20 delivered) in UAT MOM Section 5.4.3.</td>
-        <td class="col-owner">Enzo</td>
-        <td class="col-dates">Closed (validated Nov 2025; reconfirmed Jun 19)</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s5-2" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s5-3" data-module="logistics" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">At least one multi-batch delivery processed end-to-end in production (deliverable evidence)</td>
-        <td class="col-status">Not yet confirmed. Formal deliverable criterion for Task 4.3.4.</td>
-        <td class="col-owner">Raymagean / Enzo</td>
-        <td class="col-dates">Jul 13 – Jul 16</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s5-3" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s5-4" data-module="logistics" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Lock configuration choice for stock validation enforcement on delivery (allow vs. block)</td>
-        <td class="col-status">NEW — UAT MOM Action #23. Explicitly flagged in the MOM as a decision to be locked before go-live — not yet decided. Train dispatch staff on the operational implication once locked.</td>
-        <td class="col-owner">Enzo / Jun Avila</td>
-        <td class="col-dates">Jun 19 – Jul 13 (⚠ GO/NO-GO ITEM)</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s5-4" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s5-5" data-module="logistics" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Confirm and document SOP for undelivered balance in partial deliveries (backorder vs. write-off vs. manual adjustment)</td>
-        <td class="col-status">NEW — UAT MOM Action #22. Mechanics clarified live in UAT but no formal SOP written yet.</td>
-        <td class="col-owner">Enzo / Raymagean</td>
-        <td class="col-dates">Jun 19 – Jul 13</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s5-5" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s5-6" data-module="logistics" class="row-qa">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-qa">&#10022; QA</span>Transaction spot-check sampling (light-touch)</td>
-        <td class="col-status">Merged (Item D). Reduced frequency given GS-Manila/MACAS-Batangas distance.</td>
-        <td class="col-owner">Enzo / Raymagean</td>
-        <td class="col-dates">Jul 13 – Jul 16</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s5-6" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      </tbody>
-    </table>
-    </div>
-</section>
-<section class="mgl-card" id="sec6">
-  <h2 class="mgl-card-title">6. Purchase — Pre-Go-Live Activities (Jul 17–22)</h2>
-  <p class="owners">GS Owner: Lance (Lawrence Perez) &nbsp;|&nbsp; MACAS Counterpart: Bong (Renato Legaspi)</p>
-  
-  
-    <div class="table-wrap">
-    <table class="grid" id="t6">
-      <thead><tr>
-        <th class="light-cell">Status</th>
-        <th class="col-activity">Activity</th>
-        <th class="col-status">Status as of Jul 6</th>
-        <th class="col-owner">Owner / Respondent</th>
-        <th class="col-dates">Inclusive Dates</th>
-        <th class="col-comment">Comments</th>
-      </tr></thead>
-      <tbody>
-      <tr data-id="s6-1" data-module="purchase" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Vendor master data, pricing terms, preferred suppliers</td>
-        <td class="col-status">MACAS input requested per Jul 1 bulletin. (⚠ verify current status)</td>
-        <td class="col-owner">Bong</td>
-        <td class="col-dates">Jul 1 – Jul 17</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s6-1" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s6-2" data-module="purchase" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Spare parts requisition workflow</td>
-        <td class="col-status">Being finalized per Jul 1 bulletin.</td>
-        <td class="col-owner">Lance</td>
-        <td class="col-dates">Jul 1 – Jul 17</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s6-2" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s6-3" data-module="purchase" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Point person confirmation for PO approval under “Sir RBB”</td>
-        <td class="col-status">Open item raised by Lance (Jun 30) — no response on record yet.</td>
-        <td class="col-owner">Bong / Japs</td>
-        <td class="col-dates">Jun 30 – Jul 17</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s6-3" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s6-4" data-module="purchase" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">At least one PO → receipt → vendor bill cycle completed in production (deliverable evidence)</td>
-        <td class="col-status">Not yet started. Formal deliverable criterion for Task 4.3.5.</td>
-        <td class="col-owner">Lance / Bong</td>
-        <td class="col-dates">Jul 17 – Jul 22</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s6-4" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s6-5" data-module="purchase" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Confirm Units of Measure for purchase transactions (per trip, per cubic meter, etc.)</td>
-        <td class="col-status">NEW — UAT MOM Action #1. MACAS charges per-trip rather than per-unit for many purchases; needs specific UoM configuration in Odoo.</td>
-        <td class="col-owner">Bong / Lance</td>
-        <td class="col-dates">Jun 17 – Jul 17</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s6-5" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s6-6" data-module="purchase" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Set purchase invoice policy to “Based on received quantities” (Odoo Settings → Purchase)</td>
-        <td class="col-status">NEW — UAT MOM Action #2. Confirmed decision: billing should trigger upon receipt, not upon ordering.</td>
-        <td class="col-owner">Lance / Jun Avila</td>
-        <td class="col-dates">Jun 17 – Jul 17</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s6-6" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s6-7" data-module="purchase" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Assess and configure custom DR Number field on purchase receipts (Studio-first)</td>
-        <td class="col-status">NEW — UAT MOM Action #3. Needed to make the delivery receipt reference searchable/accessible in Odoo.</td>
-        <td class="col-owner">Lance / Japs</td>
-        <td class="col-dates">Jun 17 – Jul 17</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s6-7" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s6-8" data-module="purchase" class="row-qa">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-qa">&#10022; QA</span>Report-based validation: Vendor bill vs. PO variance, at least twice within the window</td>
-        <td class="col-status">Merged (Item A).</td>
-        <td class="col-owner">Lance / Bong</td>
-        <td class="col-dates">Jul 17 – Jul 22 (2x)</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s6-8" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      </tbody>
-    </table>
-    </div>
-</section>
-<section class="mgl-card" id="sec7">
-  <h2 class="mgl-card-title">7. Maintenance — Pre-Go-Live Activities (Jul 23–28)</h2>
-  <p class="owners">GS Owner: Lance (Lawrence Perez) &nbsp;|&nbsp; MACAS Counterpart: Moises Rocafort Jr.</p>
-  
-  
-    <div class="table-wrap">
-    <table class="grid" id="t7">
-      <thead><tr>
-        <th class="light-cell">Status</th>
-        <th class="col-activity">Activity</th>
-        <th class="col-status">Status as of Jul 6</th>
-        <th class="col-owner">Owner / Respondent</th>
-        <th class="col-dates">Inclusive Dates</th>
-        <th class="col-comment">Comments</th>
-      </tr></thead>
-      <tbody>
-      <tr data-id="s7-1" data-module="maintenance" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Equipment list, spare parts list, maintenance team roster</td>
-        <td class="col-status">UAT MOM Action #12 confirms this is still needed from Moises for Odoo data entry.</td>
-        <td class="col-owner">Moises</td>
-        <td class="col-dates">Jun 18 – Jul 23</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s7-1" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s7-2" data-module="maintenance" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Hybrid Maintenance+Manufacturing workaround demonstrated on a real maintenance request (deliverable evidence)</td>
-        <td class="col-status">RISK — workaround-dependent, not a native Odoo flow. Formal deliverable criterion for Task 4.3.6. UAT MOM confirms this is the agreed design (Section 5.2.4) but still needs formal documentation and testing (Action #10).</td>
-        <td class="col-owner">Moises / Lance</td>
-        <td class="col-dates">Jul 23 – Jul 28</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s7-2" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s7-3" data-module="maintenance" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Volume-based costing (50,000 CBM replacement intervals) and mandatory Inspection Kanban stage</td>
-        <td class="col-status">Configured per known MACAS-specific setup; production validation still pending. UAT MOM confirms Inspection stage was agreed (Section 5.2.11) and costing conversion approach agreed in principle (Section 5.2.13).</td>
-        <td class="col-owner">Lance</td>
-        <td class="col-dates">Jul 23 – Jul 28</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s7-3" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s7-4" data-module="maintenance" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Create machine-specific Virtual BOMs (e.g., Jaw Crusher BOM) listing all possible spare parts/consumables</td>
-        <td class="col-status">NEW — UAT MOM Action #36. More precise than a generic virtual product BOM; anchors parts list to each equipment type.</td>
-        <td class="col-owner">Lance / Moises</td>
-        <td class="col-dates">Jun 18 – Jul 23</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s7-4" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s7-5" data-module="maintenance" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Configure “Waiting for Materials” Kanban status as formal handoff trigger to Purchase Request</td>
-        <td class="col-status">NEW — UAT MOM Action #39. Stage 1: visual trigger only; full PO automation deferred to Stage 2 (Aug–Sep 2026).</td>
-        <td class="col-owner">Lance / Jun Avila</td>
-        <td class="col-dates">Jun 18 – Jul 23</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s7-5" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s7-6" data-module="maintenance" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Include diesel and electricity as BOM line items in repair Manufacturing Orders</td>
-        <td class="col-status">NEW — UAT MOM Action #38. Needed for accurate total maintenance cost valuation, not just spare parts.</td>
-        <td class="col-owner">Lance / Enzo</td>
-        <td class="col-dates">Jun 18 – Jul 23</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s7-6" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s7-7" data-module="maintenance" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Configure automated action: Maintenance request → In Progress triggers Manufacturing Work Order</td>
-        <td class="col-status">NEW — UAT MOM Action #11. Reduces manual effort in the hybrid workaround.</td>
-        <td class="col-owner">Lance / Jun Avila</td>
-        <td class="col-dates">Jun 18 – Jul 23</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s7-7" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s7-8" data-module="maintenance" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Confirm stage-transition timestamps are captured and accessible in Maintenance reports</td>
-        <td class="col-status">NEW — UAT MOM Action #13. Required for future MTBF and repair-time KPI tracking.</td>
-        <td class="col-owner">Lance / Jun Avila</td>
-        <td class="col-dates">Jun 18 – Jul 23</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s7-8" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s7-9" data-module="maintenance" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Define threshold distinguishing a “quick repair” from a “hardworks” repair</td>
-        <td class="col-status">NEW — UAT MOM Action #34. Determines whether quick repairs use the full hybrid MO process or a simplified record.</td>
-        <td class="col-owner">Moises / Lance</td>
-        <td class="col-dates">Jun 18 – Jul 23</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s7-9" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s7-10" data-module="maintenance" class="row-qa">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-qa">&#10022; QA</span>Manual fallback / continuity check for login-dependent maintenance workflows</td>
-        <td class="col-status">Merged (Item G, from Data Validation &amp; QA set). Given the recurring token/login issue, confirm a manual fallback exists.</td>
-        <td class="col-owner">Lance / Moises</td>
-        <td class="col-dates">Jul 20 – Jul 23</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s7-10" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      </tbody>
-    </table>
-    </div>
-</section>
-<section class="mgl-card" id="sec8">
-  <h2 class="mgl-card-title">8. Production — Pre-Go-Live Activities (Jul 23–28)</h2>
-  <p class="owners">GS Owner: Enzo (Lorenzo Alagao) &nbsp;|&nbsp; MACAS Counterpart: Raymagean Dela Cruz</p>
-  
-  
-    <div class="table-wrap">
-    <table class="grid" id="t8">
-      <thead><tr>
-        <th class="light-cell">Status</th>
-        <th class="col-activity">Activity</th>
-        <th class="col-status">Status as of Jul 6</th>
-        <th class="col-owner">Owner / Respondent</th>
-        <th class="col-dates">Inclusive Dates</th>
-        <th class="col-comment">Comments</th>
-      </tr></thead>
-      <tbody>
-      <tr data-id="s8-1" data-module="production" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Yield/output percentages per material batch, production timing standards</td>
-        <td class="col-status">UAT MOM Action #15/#16 confirm this is still required from Raymagean to finalize the by-products BOM and Work Center standards.</td>
-        <td class="col-owner">Raymagean</td>
-        <td class="col-dates">Jun 19 – Jul 23</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s8-1" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s8-2" data-module="production" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">Route A and Route B Manufacturing Order validation</td>
-        <td class="col-status">Substantially validated during UAT; UAT MOM formally confirms the two-route design (Section 5.3.24).</td>
-        <td class="col-owner">Enzo</td>
-        <td class="col-dates">Closed (validated in UAT, Jun 19)</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s8-2" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s8-3" data-module="production" class="">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">At least one Route A and one Route B Manufacturing Order completed in production (deliverable evidence)</td>
-        <td class="col-status">Not yet started. Formal deliverable criterion for Task 4.3.7.</td>
-        <td class="col-owner">Raymagean / Enzo</td>
-        <td class="col-dates">Jul 23 – Jul 28</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s8-3" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s8-4" data-module="production" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Configure “Rock Mass” as a product with Bank Cubic Meters (BCM) as its Unit of Measure</td>
-        <td class="col-status">NEW — UAT MOM Action #25. Formal terminology agreed in UAT; input for Route A, distinct from Blasted Material (input for Route B).</td>
-        <td class="col-owner">Enzo / Jun Avila</td>
-        <td class="col-dates">Jun 19 – Jul 23</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s8-4" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s8-5" data-module="production" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Configure two separate Manufacturing routes: Route A (Rock Mass→Blasted Material) and Route B (Blasted Material→Finished Aggregates)</td>
-        <td class="col-status">NEW — UAT MOM Action #26. Separates the infrequent blasting cycle from the continuous crushing cycle.</td>
-        <td class="col-owner">Enzo</td>
-        <td class="col-dates">Jun 19 – Jul 23</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s8-5" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s8-6" data-module="production" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Configure Secondary Breaking as a skippable Work Center in Route B</td>
-        <td class="col-status">NEW — UAT MOM Action #27. Only invoked when blasting produces oversized boulders, positioned after blast output and before the crusher.</td>
-        <td class="col-owner">Enzo</td>
-        <td class="col-dates">Jun 19 – Jul 23</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s8-6" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s8-7" data-module="production" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Decide overburden treatment: by-product of Development MO vs. separate inventory adjustment</td>
-        <td class="col-status">NEW — UAT MOM Action #28. Raymagean to advise on frequency of overburden sale vs. discard to guide the design choice.</td>
-        <td class="col-owner">Raymagean / Enzo</td>
-        <td class="col-dates">Jun 19 – Jul 23</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s8-7" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s8-8" data-module="production" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Configure Boulders, Head size (9-inch), and Apple size as by-products in the Route A (blasting) BOM</td>
-        <td class="col-status">NEW — UAT MOM Action #29. Directly saleable armor rock products from blasted material.</td>
-        <td class="col-owner">Enzo</td>
-        <td class="col-dates">Jun 19 – Jul 23</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s8-8" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s8-9" data-module="production" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Confirm per-product density factors for all finished aggregate types (for volume-to-weight conversion)</td>
-        <td class="col-status">NEW — UAT MOM Action #30. Known reference points: in-ground Rock Mass ≈ 2.7 t/m³, finished aggregates ≈ 1.5 t/m³. Feeds the Studio custom build flagged in the Inventory section.</td>
-        <td class="col-owner">Raymagean / Enzo</td>
-        <td class="col-dates">Jun 19 – Jul 23 (⚠ feeds Studio build)</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s8-9" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s8-10" data-module="production" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Include diesel and hydraulic fluid as BOM line items in the Route A (blasting) BOM</td>
-        <td class="col-status">NEW — UAT MOM Action #31. Captures back-charged contractor material costs in production valuation.</td>
-        <td class="col-owner">Enzo / Raymagean</td>
-        <td class="col-dates">Jun 19 – Jul 23</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s8-10" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s8-11" data-module="production" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Configure Development Area as a trackable field/hierarchy for stripping-ratio and yield tracking</td>
-        <td class="col-status">NEW — UAT MOM Action #20. Supports per-area yield computation, not just operation-wide.</td>
-        <td class="col-owner">Enzo / Jun Avila</td>
-        <td class="col-dates">Jun 19 – Jul 23</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s8-11" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s8-12" data-module="production" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Update Phase 2 Configuration Coverage Matrix to reflect Production items clarified in UAT (previously 29/29 “Not Assessable”)</td>
-        <td class="col-status">NEW — UAT MOM Action #19. Documentation task, not a config task — should be done ahead of the Production go-live wave, not during it.</td>
-        <td class="col-owner">Japs</td>
-        <td class="col-dates">Jun 19 – Jul 10</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s8-12" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s8-13" data-module="production" class="row-uat">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-uat">&#10022; UAT</span>Review Arman Romero&#x27;s existing production spreadsheet; map all KPI columns to Odoo standard or custom fields</td>
-        <td class="col-status">NEW — UAT MOM Action #32. Arman Romero (MACAS Operations) maintains the current production tracking spreadsheet; ensures no management metric used today is lost in the transition to Odoo.</td>
-        <td class="col-owner">Enzo / Arman Romero</td>
-        <td class="col-dates">Jun 19 – Jul 23</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s8-13" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s8-14" data-module="production" class="row-qa">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity"><span class="mgl-badge mgl-badge-qa">&#10022; QA</span>Report-based validation: production yield/output vs. standard, at least twice within the window</td>
-        <td class="col-status">Merged (Item A).</td>
-        <td class="col-owner">Enzo / Raymagean</td>
-        <td class="col-dates">Jul 23 – Jul 28 (2x)</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s8-14" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      </tbody>
-    </table>
-    </div>
-</section>
-<section class="mgl-card" id="sec9">
-  <h2 class="mgl-card-title">9. Special Go-Live Readiness & Hypercare Preparation</h2>
-  <p class="mgl-lead">GS-side preparation sitting on top of the module-specific activities above &mdash; not configuration tasks, but the practices that make sure every deliverable actually gets produced and verified.</p>
-  <div class="hc-static">
-    <strong>9.1 Go/No-Go Readiness Gate per Module</strong> &mdash; Owner: Japs, with the relevant GS module lead and MACAS counterpart. Timing: 2&ndash;3 business days before each go-live date. Output: a logged Go/No-Go decision, with conditional items carried into hypercare.
-  </div>
-  <div class="hc-list">
-      <div class="hc-item" data-id="s9-2" data-module="hypercare">
-        <button type="button" class="light light-inline" aria-label="Status toggle"></button>
-        <div class="hc-body">
-          <div class="hc-title">9.2 Production Dry Run (Not Just UAT Sandbox)</div>
-          <div class="hc-desc">Re-run the matching UAT Guide checklist one more time in the actual production instance 1–2 days before each go-live — not the demo/training environment used during the June UAT.</div>
-          <input type="text" class="comment comment-inline" data-id="s9-2" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span>
-        </div>
-      </div>
-      <div class="hc-item" data-id="s9-3" data-module="hypercare">
-        <button type="button" class="light light-inline" aria-label="Status toggle"></button>
-        <div class="hc-body">
-          <div class="hc-title">9.3 Hypercare Staffing &amp; Escalation Plan</div>
-          <div class="hc-desc">Task 4.4 “Provide Go-Live Support” (Angel Abraham, Jul 7–28) exists but has no defined structure. Formalize who is on call each go-live week, response-time expectations, and an escalation path (module owner → Japs → BSB Board).</div>
-          <input type="text" class="comment comment-inline" data-id="s9-3" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span>
-        </div>
-      </div>
-      <div class="hc-item" data-id="s9-4" data-module="hypercare">
-        <button type="button" class="light light-inline" aria-label="Status toggle"></button>
-        <div class="hc-body">
-          <div class="hc-title">9.4 Rollback / Contingency Plan per Cutover</div>
-          <div class="hc-desc">For Inventory and Payments especially — define the fallback in a one-page contingency note per module before go-live, not improvised after something breaks.</div>
-          <input type="text" class="comment comment-inline" data-id="s9-4" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span>
-        </div>
-      </div>
-      <div class="hc-item" data-id="s9-5" data-module="hypercare">
-        <button type="button" class="light light-inline" aria-label="Status toggle"></button>
-        <div class="hc-body">
-          <div class="hc-title">9.5 Quick-Reference Cards for Workaround Processes</div>
-          <div class="hc-desc">Maintenance (hybrid Maintenance+Manufacturing, virtual BOMs per machine) and Production (by-products BOM, Route A/B, Rock Mass/BCM terminology) are workarounds and new terminology, not native Odoo flows. A one-page printable quick-reference for Moises&#x27; and Raymagean&#x27;s teams would reduce user error in week one.</div>
-          <input type="text" class="comment comment-inline" data-id="s9-5" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span>
-        </div>
-      </div>
-      <div class="hc-item" data-id="s9-6" data-module="hypercare">
-        <button type="button" class="light light-inline" aria-label="Status toggle"></button>
-        <div class="hc-body">
-          <div class="hc-title">9.6 Daily War-Room / Stand-Up</div>
-          <div class="hc-desc">15-minute daily check-in with the relevant module owner and MACAS counterpart during each go-live week, logged into the Activity &amp; Decision Log.</div>
-          <input type="text" class="comment comment-inline" data-id="s9-6" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span>
-        </div>
-      </div>
-      <div class="hc-item" data-id="s9-7" data-module="hypercare">
-        <button type="button" class="light light-inline" aria-label="Status toggle"></button>
-        <div class="hc-body">
-          <div class="hc-title">9.7 Deliverables Checklist Tied to the Post-Implementation Report</div>
-          <div class="hc-desc">Map each go-live task&#x27;s stated deliverable (from the ProjectPlan) against actual production evidence — see Section 12 matrix.</div>
-          <input type="text" class="comment comment-inline" data-id="s9-7" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span>
-        </div>
-      </div>
-      <div class="hc-item" data-id="s9-8" data-module="hypercare">
-        <button type="button" class="light light-inline" aria-label="Status toggle"></button>
-        <div class="hc-body">
-          <div class="hc-title">9.8 Team Recognition / Momentum Markers</div>
-          <div class="hc-desc">Publicly acknowledge in the GC the first live, end-to-end transaction per module. Maintain a simple visible go-live tracker per module that the team can watch fill in during the week.</div>
-          <input type="text" class="comment comment-inline" data-id="s9-8" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span>
-        </div>
-      </div>
-      <div class="hc-item item-qa" data-id="s9-9" data-module="hypercare">
-        <button type="button" class="light light-inline" aria-label="Status toggle"></button>
-        <div class="hc-body">
-          <div class="hc-title"><span class="mgl-badge mgl-badge-qa">&#10022; QA</span>9.9 Go-Live Exception Log</div>
-          <div class="hc-desc">A lightweight, module-tagged running list of issues hit during go-live week, kept separate from the formal Activity &amp; Decision Log. Explicitly best-efforts and crowd-sourced: there is no single designated owner logging every exception. Any team member who spots an issue is responsible for clearly citing it as an exception so it can be reported and pattern-matched. The bar for inclusion is that the item is clearly flagged, not that it goes through formal sign-off.</div>
-          <input type="text" class="comment comment-inline" data-id="s9-9" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span>
-        </div>
-      </div>
-      <div class="hc-item item-qa" data-id="s9-10" data-module="hypercare">
-        <button type="button" class="light light-inline" aria-label="Status toggle"></button>
-        <div class="hc-body">
-          <div class="hc-title"><span class="mgl-badge mgl-badge-qa">&#10022; QA</span>9.10 Manual Fallback / Continuity Check</div>
-          <div class="hc-desc">Confirm and circulate a documented manual fallback process (e.g., paper DR, phone/text to dispatch or to Japs) for each module where a user being locked out of Odoo mid-transaction could otherwise stall real quarry operations.</div>
-          <input type="text" class="comment comment-inline" data-id="s9-10" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span>
-        </div>
-      </div>
-      <div class="hc-item item-qa" data-id="s9-11" data-module="hypercare">
-        <button type="button" class="light light-inline" aria-label="Status toggle"></button>
-        <div class="hc-body">
-          <div class="hc-title"><span class="mgl-badge mgl-badge-qa">&#10022; QA</span>9.11 Note on Sign-Off (considered and dropped)</div>
-          <div class="hc-desc">A formal per-report sign-off requirement was proposed and explicitly dropped. The team is not accustomed to formal sign-off procedures; ordinary collaboration and communication on an item is treated as sufficient indication of agreement.</div>
-          <input type="text" class="comment comment-inline" data-id="s9-11" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span>
-        </div>
-      </div>
-  </div>
-</section>
-<section class="mgl-card" id="sec10">
-  <h2 class="mgl-card-title">10. Data Validation &amp; QA Cadence — Summary</h2>
-  <p class="mgl-lead">The finalized Data Validation &amp; QA activities (Items A–G) are merged directly into the module sections above. This summary is itself trackable.</p>
-  
-    <div class="table-wrap">
-    <table class="grid" id="t10">
-      <thead><tr>
-        <th class="light-cell">Status</th>
-        <th class="col-activity">Item</th>
-        <th class="col-status">Disposition</th>
-        <th class="col-owner-wide">Where merged</th>
-        <th class="col-comment">Comments</th>
-      </tr></thead>
-      <tbody>
-      <tr data-id="s10-1" data-module="qacadence">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">A – Report-based validation cadence</td>
-        <td class="col-status">KEPT (revised) – cadence scoped per module&#x27;s go-live window</td>
-        <td class="col-owner-wide">Sales, Inventory, Payments, Purchase, Production</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s10-1" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s10-2" data-module="qacadence">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">B – Parallel reconciliation vs. Excel</td>
-        <td class="col-status">KEPT (revised) – twice per module, conditional on existing tracker</td>
-        <td class="col-owner-wide">Sales, Payments</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s10-2" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s10-3" data-module="qacadence">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">C – Master data audit</td>
-        <td class="col-status">KEPT as originally scoped</td>
-        <td class="col-owner-wide">Sales, Inventory</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s10-3" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s10-4" data-module="qacadence">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">D – Transaction spot-check sampling</td>
-        <td class="col-status">KEPT (reduced frequency)</td>
-        <td class="col-owner-wide">Logistics</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s10-4" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s10-5" data-module="qacadence">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">E – Go-live exception log</td>
-        <td class="col-status">KEPT (informal, best-efforts, crowd-sourced)</td>
-        <td class="col-owner-wide">Section 9.9</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s10-5" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s10-6" data-module="qacadence">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">F – Defined sign-off per report</td>
-        <td class="col-status">DROPPED</td>
-        <td class="col-owner-wide">Section 9.11 (noted only)</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s10-6" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s10-7" data-module="qacadence">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">G – Manual fallback / continuity check</td>
-        <td class="col-status">KEPT</td>
-        <td class="col-owner-wide">Maintenance, Section 9.10</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s10-7" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      </tbody>
-    </table>
-    </div>
-</section>
-<section class="mgl-card" id="sec11">
-  <h2 class="mgl-card-title">11. UAT MOM Alignment — Summary</h2>
-  <p class="mgl-lead">Reference table, not a checklist &mdash; no status lights here. Summary of items merged from both UAT Minutes of Proceedings, and how the one identified conflict was resolved.</p>
-  
-    <div class="table-wrap">
-    <table class="grid grid-plain">
-      <thead><tr><th>Module</th><th>Items Merged from UAT MOM</th><th>Conflict Resolved</th></tr></thead>
-      <tbody><tr><td>Sales &amp; CRM</td><td>None new — one status correction</td><td>Quotation numbering: main UAT MOM confirms standard sequencing already works; supersedes earlier “blocked/CRM workaround” framing</td></tr><tr><td>Inventory</td><td>2 items (volume-to-weight Studio build; downgrade MO workaround documentation)</td><td>None</td></tr><tr><td>Payments &amp; Journal</td><td>12 items merged from the Accounting Module UAT MOM (SO 688, Vuildex/VX duplicate, Check Date field, Customer Master File controls, delivery-variance journal treatment, custom Accounting view, report print formats, May–Jul Excel bulk-import templates, April encoding completion, consolidated-invoicing decision, CF office relocation continuity, Vendor Bills/Petty Cash scoping)</td><td>RBAC approval workflow item reworded — role-split direction (Susan Manalo/Ana Pablo) confirmed consistent, not actually in conflict; only the detailed step-by-step workflow remains open</td></tr><tr><td>Logistics &amp; Dispatch</td><td>2 items (stock validation lock — flagged GO/NO-GO; partial delivery SOP)</td><td>None</td></tr><tr><td>Purchase</td><td>3 items (UoM per-trip config; invoice policy setting; DR Number field)</td><td>None</td></tr><tr><td>Maintenance</td><td>7 items (virtual BOMs, Waiting-for-Materials status, diesel/electricity BOM, automated MO trigger, KPI timestamps, quick-repair threshold)</td><td>None</td></tr><tr><td>Production</td><td>9 items (Rock Mass/BCM, Route A/B, Secondary Breaking, overburden decision, by-products, density factors, diesel/hydraulic BOM, Development Area tracking, Coverage Matrix update)</td><td>None</td></tr></tbody>
-    </table>
-    </div>
-</section>
-<section class="mgl-card" id="sec12">
-  <h2 class="mgl-card-title">12. Consolidated Deliverable Verification Matrix</h2>
-  <p class="mgl-lead">Each go-live task's deliverable stated as concrete production evidence &mdash; useful for the Post-Implementation Review.</p>
-  
-    <div class="table-wrap">
-    <table class="grid" id="t12">
-      <thead><tr>
-        <th class="light-cell">Status</th>
-        <th class="col-activity">Task</th>
-        <th class="col-status">Deliverable (Evidence Required)</th>
-        <th class="col-owner-wide">Status (Jul 6)</th>
-        <th class="col-comment">Comments</th>
-      </tr></thead>
-      <tbody>
-      <tr data-id="s12-1" data-module="deliverable">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">4.3.1 Deploy Odoo Sales</td>
-        <td class="col-status">At least one real Sales Order carried Confirm → Delivery → Invoice in production</td>
-        <td class="col-owner-wide">In progress — live encoding underway since Jul 1</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s12-1" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s12-2" data-module="deliverable">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">4.3.2 Deploy Odoo Inventory</td>
-        <td class="col-status">Opening balances loaded and reconciled; stockpile locations live</td>
-        <td class="col-owner-wide">In progress — Sulpicio inventory count underway</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s12-2" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s12-3" data-module="deliverable">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">4.3.3 Deploy Odoo Payments→Journal</td>
-        <td class="col-status">BIR invoice template live with all 4 custom fields printing correctly</td>
-        <td class="col-owner-wide">Blocked — pending CF template</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s12-3" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s12-4" data-module="deliverable">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">4.3.4 Deploy Odoo Logistics</td>
-        <td class="col-status">At least one multi-batch delivery processed end-to-end in production</td>
-        <td class="col-owner-wide">Not yet started</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s12-4" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s12-5" data-module="deliverable">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">4.3.5 Deploy Odoo Purchase</td>
-        <td class="col-status">At least one PO → receipt → vendor bill cycle completed in production</td>
-        <td class="col-owner-wide">Not yet started</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s12-5" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s12-6" data-module="deliverable">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">4.3.6 Deploy Odoo Maintenance</td>
-        <td class="col-status">Hybrid MO workaround demonstrated on a real maintenance request</td>
-        <td class="col-owner-wide">Not yet started</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s12-6" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s12-7" data-module="deliverable">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">4.3.7 Deploy Production (MRP)</td>
-        <td class="col-status">At least one Route A and Route B Manufacturing Order completed in production</td>
-        <td class="col-owner-wide">Not yet started</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s12-7" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      <tr data-id="s12-8" data-module="deliverable">
-        <td class="light-cell"><button type="button" class="light" aria-label="Status toggle"></button></td>
-        <td class="col-activity">4.5 Conduct Post-Implementation Review</td>
-        <td class="col-status">All rows above confirmed with evidence before the report is finalized</td>
-        <td class="col-owner-wide">Pending</td>
-        <td class="col-comment"><input type="text" class="comment" data-id="s12-8" placeholder="Add a note…" maxlength="240"><span class="comment-print-text"></span></td>
-      </tr>
-      </tbody>
-    </table>
-    </div>
-</section>
   </main>
 </div>
 
 <footer>
-  Prepared for Japs Malata, Golden Suntec Solutions, Inc. Status lights and comments are saved locally in this browser only (not shared automatically across devices or team members) &mdash; use <strong>Export backup</strong> to save a snapshot you can share or re-import elsewhere. Checked for alignment against the MACAS UAT Wave 2 MOM (v2.2) and the Accounting Module UAT MOM (v1.0); both were treated as authoritative wherever they conflicted with other sources.
+  Prepared for Japs Malata, Golden Suntec Solutions, Inc. Status lights and comments are stored in the shared MACAS Go-Live Dashboard Google Sheet, so everyone sees the same live data &mdash; reload the page to pull the latest. Section 1 (Go-Live Calendar) and Section 11 (UAT MOM Alignment) are stable reference tables held in the page itself. Checked for alignment against the MACAS UAT Wave 2 MOM (v2.2) and the Accounting Module UAT MOM (v1.0); both were treated as authoritative wherever they conflicted with other sources.
 </footer>
 
 <script>
 (function(){
+  /* ============================================================
+     1) PASTE YOUR WEB APP URL BELOW (from Apps Script deployment)
+        It looks like: https://script.google.com/macros/s/AKfycb..../exec
+     ============================================================ */
+  var API_URL = 'https://script.google.com/macros/s/AKfycbwNzDuDzz56WZzlOTjqGKMTg6bpo4DGgKuARCthkCD6cAjLdY8BnP2Q6ifA9Gyf15Pp/exec';
+
   var LIGHT_ORDER = ['red','yellow','green','gray'];
-  var LS_LIGHT_PREFIX = 'macasGoLive_light_';
-  var LS_COMMENT_PREFIX = 'macasGoLive_comment_';
-  var EDIT_PASSWORD = 'macas-odoo';
+  var LABELS = {red:'Not started', yellow:'Ongoing', green:'Done', gray:'Not needed'};
+  var BADGE = {
+    QA:  {cls:'mgl-badge-qa',  text:'\u2726 QA'},
+    UAT: {cls:'mgl-badge-uat', text:'\u2726 UAT'},
+    ACCT:{cls:'mgl-badge-acct',text:'\u2726 ACCT-UAT'}
+  };
+  var ROWCLASS = {QA:'row-qa', UAT:'row-uat', ACCT:'row-acct'};
+
+  var DATA = {config:[], activities:[]};
   var editEnabled = false;
+  var sessionPassword = null;
 
-  function getLight(id){ return localStorage.getItem(LS_LIGHT_PREFIX+id) || 'red'; }
-  function setLight(id,val){ localStorage.setItem(LS_LIGHT_PREFIX+id, val); }
-  function getComment(id){ return localStorage.getItem(LS_COMMENT_PREFIX+id) || ''; }
-  function setComment(id,val){ localStorage.setItem(LS_COMMENT_PREFIX+id, val); }
+  /* ---- Static reference sections (stable; not stored in the Sheet) ---- */
+  var CALENDAR_HTML =
+    '<section class="mgl-card" id="cal">' +
+    '<h2 class="mgl-card-title">1. Purpose &amp; Go-Live Calendar</h2>' +
+    '<p class="mgl-lead">This dashboard consolidates module-specific pre-go-live activities, deliverable evidence criteria, data validation/QA activities, and GS-side special readiness/hypercare preparation for the MACAS phased go-live sequence.</p>' +
+    '<p class="mgl-lead">Tap a status light to cycle it: <strong style="color:#E53935">Red</strong> (not yet started) &rarr; <strong style="color:#F5A623">Yellow</strong> (ongoing) &rarr; <strong style="color:#2E9E4A">Green</strong> (done) &rarr; <strong style="color:#8A8F98">Gray</strong> (not needed) &rarr; back to Red. Changes are saved to the shared Google Sheet; others see them after reloading.</p>' +
+    '<div class="table-wrap"><table class="grid grid-plain"><thead><tr><th>Wave</th><th>Module(s)</th><th>Dates (per Project Plan)</th></tr></thead><tbody>' +
+    '<tr><td>1</td><td>Sales &amp; CRM (4.3.1) / Inventory (4.3.2)</td><td>Jul 7 &ndash; 10</td></tr>' +
+    '<tr><td>2</td><td>Payments&rarr;Journal (4.3.3) / Logistics (4.3.4)</td><td>Jul 13 &ndash; 16</td></tr>' +
+    '<tr><td>3</td><td>Purchase (4.3.5)</td><td>Jul 17 &ndash; 22</td></tr>' +
+    '<tr><td>4</td><td>Maintenance (4.3.6) / Production (4.3.7)</td><td>Jul 23 &ndash; 28</td></tr>' +
+    '<tr><td>&mdash;</td><td>Go-Live Support Window (4.4, Angel Abraham)</td><td>Jul 7 &ndash; 28</td></tr>' +
+    '<tr><td>&mdash;</td><td>Post-Implementation Review (4.5)</td><td>Jul 29 &ndash; 31</td></tr>' +
+    '</tbody></table></div></section>';
 
-  function initLights(){
+  var UAT_HTML =
+    '<section class="mgl-card" id="sec11">' +
+    '<h2 class="mgl-card-title">11. UAT MOM Alignment &mdash; Summary</h2>' +
+    '<p class="mgl-lead">Reference table, not a checklist &mdash; no status lights here. Summary of items merged from both UAT Minutes of Proceedings, and how the one identified conflict was resolved.</p>' +
+    '<div class="table-wrap"><table class="grid grid-plain"><thead><tr><th>Module</th><th>Items Merged from UAT MOM</th><th>Conflict Resolved</th></tr></thead><tbody>' +
+    '<tr><td>Sales &amp; CRM</td><td>None new &mdash; one status correction</td><td>Quotation numbering: main UAT MOM confirms standard sequencing already works; supersedes earlier &ldquo;blocked/CRM workaround&rdquo; framing</td></tr>' +
+    '<tr><td>Inventory</td><td>2 items (volume-to-weight Studio build; downgrade MO workaround documentation)</td><td>None</td></tr>' +
+    '<tr><td>Payments &amp; Journal</td><td>12 items merged from the Accounting Module UAT MOM (SO 688, Vuildex/VX duplicate, Check Date field, Customer Master File controls, delivery-variance journal treatment, custom Accounting view, report print formats, May&ndash;Jul Excel bulk-import templates, April encoding completion, consolidated-invoicing decision, CF office relocation continuity, Vendor Bills/Petty Cash scoping)</td><td>RBAC approval workflow item reworded &mdash; role-split direction (Susan Manalo/Ana Pablo) confirmed consistent, not actually in conflict; only the detailed step-by-step workflow remains open</td></tr>' +
+    '<tr><td>Logistics &amp; Dispatch</td><td>2 items (stock validation lock &mdash; flagged GO/NO-GO; partial delivery SOP)</td><td>None</td></tr>' +
+    '<tr><td>Purchase</td><td>3 items (UoM per-trip config; invoice policy setting; DR Number field)</td><td>None</td></tr>' +
+    '<tr><td>Maintenance</td><td>7 items (virtual BOMs, Waiting-for-Materials status, diesel/electricity BOM, automated MO trigger, KPI timestamps, quick-repair threshold)</td><td>None</td></tr>' +
+    '<tr><td>Production</td><td>9 items (Rock Mass/BCM, Route A/B, Secondary Breaking, overburden decision, by-products, density factors, diesel/hydraulic BOM, Development Area tracking, Coverage Matrix update)</td><td>None</td></tr>' +
+    '</tbody></table></div></section>';
+
+  function esc(s){
+    return String(s==null?'':s)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  }
+  function normLight(v){
+    v = String(v==null?'':v).toLowerCase().trim();
+    return LIGHT_ORDER.indexOf(v) === -1 ? 'red' : v;
+  }
+
+  /* ---------------------------- Data ---------------------------- */
+  function loadData(){
+    var root = document.getElementById('sections-root');
+    if(API_URL.indexOf('PASTE_YOUR_WEB_APP_URL') === 0){
+      root.innerHTML = '<div class="mgl-card"><div class="state-msg"><strong>Setup needed</strong>The dashboard is not yet connected to its Google Sheet. Paste your Apps Script Web App URL into the API_URL value near the top of this file&#39;s script, then re-upload.</div></div>';
+      return;
+    }
+    setSync('Syncing\u2026');
+    fetch(API_URL, {method:'GET'})
+      .then(function(r){ return r.json(); })
+      .then(function(res){
+        if(!res || !res.ok){ throw new Error(res && res.error ? res.error : 'bad_response'); }
+        DATA.config = res.config || [];
+        DATA.activities = res.activities || [];
+        render();
+        setSync('Updated ' + new Date().toLocaleTimeString());
+      })
+      .catch(function(err){
+        root.innerHTML = '<div class="mgl-card"><div class="state-msg"><strong>Could not load data</strong>' +
+          esc(String(err)) + '<br><br><button class="mgl-btn mgl-btn-orange" onclick="location.reload()">Retry</button></div></div>';
+        setSync('Sync failed');
+      });
+  }
+
+  function setSync(t){ var el=document.getElementById('sync-note'); if(el) el.textContent=t; }
+
+  /* --------------------------- Render --------------------------- */
+  function render(){
+    var cfg = DATA.config.slice().sort(function(a,b){ return num(a.SectionNumber)-num(b.SectionNumber); });
+    renderBreakdown(cfg);
+
+    var byKey = {};
+    DATA.activities.forEach(function(a){
+      var k = a.SectionKey; (byKey[k] = byKey[k] || []).push(a);
+    });
+    Object.keys(byKey).forEach(function(k){
+      byKey[k].sort(function(a,b){ return num(a.Order)-num(b.Order); });
+    });
+
+    // build sections in numeric order, weaving in the two static sections
+    var slots = {};
+    cfg.forEach(function(c){ slots[num(c.SectionNumber)] = c; });
+    var maxNum = 12;
+    cfg.forEach(function(c){ maxNum = Math.max(maxNum, num(c.SectionNumber)); });
+
+    var html = CALENDAR_HTML;   // Section 1
+    for(var n=2; n<=maxNum; n++){
+      if(n === 11){ html += UAT_HTML; continue; }   // static Section 11
+      var c = slots[n];
+      if(!c) continue;
+      var rows = byKey[c.SectionKey] || [];
+      html += (String(c.Layout).trim() === 'hypercare') ? renderHypercare(c, rows) : renderTable(c, rows);
+    }
+    document.getElementById('sections-root').innerHTML = html;
+
+    wireLights();
+    wireComments();
+    updateDashboard();
+    updateModuleBreakdown();
+    reportHeight();
+  }
+
+  function num(v){ var n = parseFloat(v); return isNaN(n) ? 0 : n; }
+
+  function badgeHtml(b){
+    b = String(b||'').trim().toUpperCase();
+    if(!BADGE[b]) return '';
+    return '<span class="mgl-badge '+BADGE[b].cls+'">'+BADGE[b].text+'</span>';
+  }
+
+  function lightCell(a){
+    var st = normLight(a.Light);
+    return '<td class="light-cell"><button type="button" class="light" data-state="'+st+
+      '" data-id="'+esc(a.ID)+'" data-module="'+esc(a.SectionKey)+'" aria-label="Status toggle" title="'+LABELS[st]+'"></button></td>';
+  }
+  function commentCell(a){
+    var v = a.Comment==null ? '' : String(a.Comment);
+    return '<td class="col-comment"><input type="text" class="comment" data-id="'+esc(a.ID)+
+      '" value="'+esc(v)+'" placeholder="Add a note\u2026" maxlength="240"><span class="comment-print-text">'+
+      (v.trim()?esc(v):'\u2014')+'</span></td>';
+  }
+
+  function renderTable(c, rows){
+    var hasC4 = String(c.Col4Header||'').trim() !== '';
+    var head = '<tr><th class="light-cell">Status</th>' +
+      '<th class="col-activity">'+esc(c.Col1Header)+'</th>' +
+      '<th class="col-status">'+esc(c.Col2Header)+'</th>' +
+      '<th class="col-owner-wide">'+esc(c.Col3Header)+'</th>' +
+      (hasC4 ? '<th class="col-dates">'+esc(c.Col4Header)+'</th>' : '') +
+      '<th class="col-comment">Comments</th></tr>';
+    var body = rows.map(function(a){
+      var b = String(a.Badge||'').trim().toUpperCase();
+      var rc = ROWCLASS[b] || '';
+      return '<tr class="'+rc+'">' + lightCell(a) +
+        '<td class="col-activity">'+badgeHtml(a.Badge)+esc(a.Col1)+'</td>' +
+        '<td class="col-status">'+esc(a.Col2)+'</td>' +
+        '<td class="col-owner-wide">'+esc(a.Col3)+'</td>' +
+        (hasC4 ? '<td class="col-dates">'+esc(a.Col4)+'</td>' : '') +
+        commentCell(a) + '</tr>';
+    }).join('');
+    var note = String(c.Note||'').trim() ? '<p class="note">'+esc(c.Note)+'</p>' : '';
+    var owners = String(c.Owners||'').trim() ? '<p class="owners">'+esc(c.Owners)+'</p>' : '';
+    var lead = String(c.Lead||'').trim() ? '<p class="mgl-lead">'+esc(c.Lead)+'</p>' : '';
+    return '<section class="mgl-card" id="sec'+esc(c.SectionNumber)+'">' +
+      '<h2 class="mgl-card-title">'+esc(c.Title)+'</h2>' + owners + note + lead +
+      '<div class="table-wrap"><table class="grid"><thead>'+head+'</thead><tbody>'+body+'</tbody></table></div></section>';
+  }
+
+  function renderHypercare(c, rows){
+    var lead = String(c.Lead||'').trim() ? '<p class="mgl-lead">'+esc(c.Lead)+'</p>' : '';
+    var stat = String(c.StaticBlock||'').trim() ? '<div class="hc-static"><strong>'+esc(c.StaticBlock)+'</strong></div>' : '';
+    var items = rows.map(function(a){
+      var b = String(a.Badge||'').trim().toUpperCase();
+      var qa = (b === 'QA') ? ' item-qa' : '';
+      var v = a.Comment==null ? '' : String(a.Comment);
+      var st = normLight(a.Light);
+      return '<div class="hc-item'+qa+'">' +
+        '<button type="button" class="light light-inline" data-state="'+st+'" data-id="'+esc(a.ID)+
+        '" data-module="'+esc(a.SectionKey)+'" aria-label="Status toggle" title="'+LABELS[st]+'"></button>' +
+        '<div class="hc-body"><div class="hc-title">'+badgeHtml(a.Badge)+esc(a.Col1)+'</div>' +
+        '<div class="hc-desc">'+esc(a.Col2)+'</div>' +
+        '<input type="text" class="comment comment-inline" data-id="'+esc(a.ID)+'" value="'+esc(v)+
+        '" placeholder="Add a note\u2026" maxlength="240"><span class="comment-print-text">'+(v.trim()?esc(v):'\u2014')+'</span>' +
+        '</div></div>';
+    }).join('');
+    return '<section class="mgl-card" id="sec'+esc(c.SectionNumber)+'">' +
+      '<h2 class="mgl-card-title">'+esc(c.Title)+'</h2>' + lead + stat +
+      '<div class="hc-list">'+items+'</div></section>';
+  }
+
+  function renderBreakdown(cfg){
+    var html = cfg.map(function(c){
+      var k = esc(c.SectionKey);
+      return '<div class="mcard" data-module-mgl-card="'+k+'">' +
+        '<div class="mcard-head">'+esc(c.CardLabel || c.SectionKey)+'</div>' +
+        '<div class="mcard-body">' +
+        '<div class="mstat mred"><span class="mdot"></span><span class="mval" data-m="'+k+'" data-c="red">0</span></div>' +
+        '<div class="mstat myellow"><span class="mdot"></span><span class="mval" data-m="'+k+'" data-c="yellow">0</span></div>' +
+        '<div class="mstat mgreen"><span class="mdot"></span><span class="mval" data-m="'+k+'" data-c="green">0</span></div>' +
+        '<div class="mstat mgray"><span class="mdot"></span><span class="mval" data-m="'+k+'" data-c="gray">0</span></div>' +
+        '<div class="mtotal">of <span data-m="'+k+'" data-c="total">0</span></div></div>' +
+        '<div class="mbar"><div class="mbar-fill" data-m="'+k+'"></div></div></div>';
+    }).join('');
+    document.getElementById('mgrid').innerHTML = html;
+  }
+
+  /* --------------------------- Wiring --------------------------- */
+  function wireLights(){
     document.querySelectorAll('.light').forEach(function(btn){
-      var row = btn.closest('[data-id]');
-      if(!row) return;
-      var id = row.getAttribute('data-id');
-      var state = getLight(id);
-      btn.setAttribute('data-state', state);
-      btn.title = labelFor(state);
       btn.addEventListener('click', function(){
         if(!editEnabled){ flashLockHint(); return; }
+        var id = btn.getAttribute('data-id');
         var cur = btn.getAttribute('data-state') || 'red';
         var next = LIGHT_ORDER[(LIGHT_ORDER.indexOf(cur)+1) % LIGHT_ORDER.length];
         btn.setAttribute('data-state', next);
-        btn.title = labelFor(next);
-        setLight(id, next);
-        updateDashboard();
-        updateModuleBreakdown();
+        btn.title = LABELS[next];
+        updateDashboard(); updateModuleBreakdown();
+        saveField(id, 'light', next, function(ok){
+          if(!ok){ btn.setAttribute('data-state', cur); btn.title = LABELS[cur]; updateDashboard(); updateModuleBreakdown(); }
+        });
       });
     });
   }
 
-  function labelFor(state){
-    return {red:'Not started', yellow:'Ongoing', green:'Done', gray:'Not needed'}[state] || state;
+  function wireComments(){
+    document.querySelectorAll('.comment').forEach(function(inp){
+      inp.readOnly = !editEnabled;
+      var id = inp.getAttribute('data-id');
+      var t;
+      inp.addEventListener('input', function(){
+        syncPrint(inp);
+        if(!editEnabled) return;
+        clearTimeout(t);
+        t = setTimeout(function(){
+          saveField(id, 'comment', inp.value, function(ok){
+            inp.classList.remove('saved-flash','save-error');
+            inp.classList.add(ok ? 'saved-flash' : 'save-error');
+            setTimeout(function(){ inp.classList.remove('saved-flash'); }, 700);
+          });
+        }, 500);
+      });
+    });
   }
 
-  function flashLockHint(){
-    var pill = document.getElementById('lock-status');
-    if(!pill) return;
-    pill.classList.add('shake');
-    setTimeout(function(){ pill.classList.remove('shake'); }, 400);
-  }
-
-  function syncPrintSpan(inp){
+  function syncPrint(inp){
     var span = inp.nextElementSibling;
     if(span && span.classList.contains('comment-print-text')){
       span.textContent = inp.value && inp.value.trim() ? inp.value : '\u2014';
     }
   }
 
-  function initComments(){
-    document.querySelectorAll('.comment').forEach(function(inp){
-      var id = inp.getAttribute('data-id');
-      inp.value = getComment(id);
-      inp.readOnly = !editEnabled;
-      syncPrintSpan(inp);
-      var t;
-      inp.addEventListener('input', function(){
-        syncPrintSpan(inp);
-        if(!editEnabled){ return; }
-        clearTimeout(t);
-        t = setTimeout(function(){
-          setComment(id, inp.value);
-          inp.classList.add('saved-flash');
-          setTimeout(function(){ inp.classList.remove('saved-flash'); }, 400);
-        }, 250);
-      });
-    });
+  function saveField(id, field, value, cb){
+    fetch(API_URL, {
+      method:'POST',
+      headers:{'Content-Type':'text/plain;charset=utf-8'},
+      body: JSON.stringify({ action:'update', id:id, field:field, value:value, password:sessionPassword })
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(res){
+      if(res && res.ok){ setSync('Saved ' + new Date().toLocaleTimeString()); cb && cb(true); }
+      else if(res && res.error === 'bad_password'){
+        alert('That edit password was not accepted by the server. Editing has been locked again.');
+        setEditMode(false); cb && cb(false);
+      } else { setSync('Save failed'); cb && cb(false); }
+    })
+    .catch(function(){ setSync('Save failed \u2014 check connection'); cb && cb(false); });
   }
 
-  function exportPdf(){
-    window.print();
-  }
-
-  function setEditMode(on){
-    editEnabled = on;
-    document.body.classList.toggle('locked', !on);
-    document.body.classList.toggle('unlocked', on);
-    var pill = document.getElementById('lock-status');
-    var editBtn = document.getElementById('mgl-btn-edit');
-    if(on){
-      pill.textContent = '\uD83D\uDD13 Editing enabled';
-      pill.className = 'lock-pill unlocked';
-      editBtn.textContent = '\uD83D\uDD12 Lock';
-    } else {
-      pill.textContent = '\uD83D\uDD12 View only';
-      pill.className = 'lock-pill locked';
-      editBtn.textContent = '\uD83D\uDD11 Edit';
-    }
-    document.querySelectorAll('input.comment').forEach(function(inp){ inp.readOnly = !on; });
-  }
-
-  function toggleEdit(){
-    if(editEnabled){ setEditMode(false); return; }
-    var pw = prompt('Enter the edit password to unlock this checklist:');
-    if(pw === null) return;
-    if(pw === EDIT_PASSWORD){ setEditMode(true); }
-    else { alert('Incorrect password. The checklist remains in view-only mode.'); }
-  }
-
+  /* --------------------------- Counts --------------------------- */
   function updateDashboard(){
     var counts = {red:0, yellow:0, green:0, gray:0};
     var lights = document.querySelectorAll('.light');
-    lights.forEach(function(btn){
-      var s = btn.getAttribute('data-state') || 'red';
-      counts[s] = (counts[s]||0) + 1;
-    });
+    lights.forEach(function(btn){ var s = btn.getAttribute('data-state')||'red'; counts[s]++; });
     var total = lights.length || 1;
     ['red','yellow','green','gray'].forEach(function(k){
-      var numEl = document.getElementById('dnum-'+k);
-      if(numEl) numEl.textContent = counts[k];
+      var el = document.getElementById('dnum-'+k); if(el) el.textContent = counts[k];
     });
     var track = document.getElementById('progress-track');
     if(track){
@@ -1475,8 +508,7 @@ body.unlocked .light{box-shadow:inset 0 -3px 5px rgba(0,0,0,.2), 0 0 0 3px rgba(
       ['green','yellow','red','gray'].forEach(function(k){
         if(counts[k] > 0){
           var seg = document.createElement('div');
-          seg.style.width = (counts[k]/total*100) + '%';
-          seg.style.background = colors[k];
+          seg.style.width = (counts[k]/total*100)+'%'; seg.style.background = colors[k];
           track.appendChild(seg);
         }
       });
@@ -1486,139 +518,92 @@ body.unlocked .light{box-shadow:inset 0 -3px 5px rgba(0,0,0,.2), 0 0 0 3px rgba(
   function updateModuleBreakdown(){
     var byModule = {};
     document.querySelectorAll('.light').forEach(function(btn){
-      var row = btn.closest('[data-module]');
-      if(!row) return;
-      var mod = row.getAttribute('data-module');
-      var state = btn.getAttribute('data-state') || 'red';
+      var mod = btn.getAttribute('data-module'); if(!mod) return;
+      var st = btn.getAttribute('data-state')||'red';
       byModule[mod] = byModule[mod] || {red:0,yellow:0,green:0,gray:0,total:0};
-      byModule[mod][state]++;
-      byModule[mod].total++;
+      byModule[mod][st]++; byModule[mod].total++;
     });
     var colors = {red:'#E53935', yellow:'#F5A623', green:'#2E9E4A', gray:'#8A8F98'};
     Object.keys(byModule).forEach(function(mod){
       var d = byModule[mod];
       ['red','yellow','green','gray'].forEach(function(k){
-        var el = document.querySelector('.mval[data-m="'+mod+'"][data-c="'+k+'"]');
-        if(el) el.textContent = d[k];
+        var el = document.querySelector('.mval[data-m="'+mod+'"][data-c="'+k+'"]'); if(el) el.textContent = d[k];
       });
-      var totalEl = document.querySelector('[data-m="'+mod+'"][data-c="total"]');
-      if(totalEl) totalEl.textContent = d.total;
+      var tot = document.querySelector('[data-m="'+mod+'"][data-c="total"]'); if(tot) tot.textContent = d.total;
       var bar = document.querySelector('.mbar-fill[data-m="'+mod+'"]');
       if(bar){
         bar.innerHTML = '';
         ['green','yellow','red','gray'].forEach(function(k){
-          if(d[k] > 0){
-            var seg = document.createElement('div');
-            seg.style.width = (d[k]/d.total*100) + '%';
-            seg.style.background = colors[k];
-            bar.appendChild(seg);
-          }
+          if(d[k] > 0){ var seg=document.createElement('div'); seg.style.width=(d[k]/d.total*100)+'%'; seg.style.background=colors[k]; bar.appendChild(seg); }
         });
       }
     });
   }
 
+  /* ------------------------- Edit mode -------------------------- */
+  function flashLockHint(){
+    var pill = document.getElementById('lock-status'); if(!pill) return;
+    pill.classList.add('shake'); setTimeout(function(){ pill.classList.remove('shake'); }, 400);
+  }
+  function setEditMode(on){
+    editEnabled = on;
+    document.body.classList.toggle('locked', !on);
+    document.body.classList.toggle('unlocked', on);
+    var pill = document.getElementById('lock-status');
+    var editBtn = document.getElementById('mgl-btn-edit');
+    if(on){ pill.textContent='\uD83D\uDD13 Editing enabled'; pill.className='lock-pill unlocked'; editBtn.textContent='\uD83D\uDD12 Lock'; }
+    else { pill.textContent='\uD83D\uDD12 View only'; pill.className='lock-pill locked'; editBtn.textContent='\uD83D\uDD11 Edit'; sessionPassword=null; }
+    document.querySelectorAll('input.comment').forEach(function(inp){ inp.readOnly = !on; });
+  }
+  function toggleEdit(){
+    if(editEnabled){ setEditMode(false); return; }
+    var pw = prompt('Enter the edit password to make changes (saved to the shared Sheet):');
+    if(pw === null || pw === '') return;
+    sessionPassword = pw;
+    setEditMode(true);
+    setSync('Editing enabled \u2014 changes save to the Sheet');
+  }
+
+  /* --------------------------- Nav ------------------------------ */
   function initNav(){
     var links = document.querySelectorAll('.mgl-nav-link');
-    var sections = Array.prototype.slice.call(document.querySelectorAll('section.mgl-card'));
     var scroller = document.scrollingElement || document.documentElement;
-
     links.forEach(function(l){
       l.addEventListener('click', function(e){
         var href = l.getAttribute('href');
-        if(href && href.charAt(0) === '#'){
+        if(href && href.charAt(0)==='#'){
           var target = document.getElementById(href.slice(1));
-          if(target){
-            e.preventDefault();
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
+          if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
         }
       });
     });
-
     function onScroll(){
       var y = (scroller.scrollTop || window.scrollY || 0) + 170;
+      var sections = Array.prototype.slice.call(document.querySelectorAll('section.mgl-card'));
       var current = sections[0] && sections[0].id;
       sections.forEach(function(s){ if(s.offsetTop <= y) current = s.id; });
-      links.forEach(function(l){
-        l.classList.toggle('active', l.getAttribute('href') === '#'+current);
-      });
+      links.forEach(function(l){ l.classList.toggle('active', l.getAttribute('href') === '#'+current); });
     }
     window.addEventListener('scroll', onScroll, {passive:true});
     onScroll();
   }
 
-  function exportData(){
-    var data = {};
-    for(var i=0;i<localStorage.length;i++){
-      var k = localStorage.key(i);
-      if(k.indexOf('macasGoLive_') === 0){ data[k] = localStorage.getItem(k); }
-    }
-    var blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
-    var url = URL.createObjectURL(blob);
-    var a = document.createElement('a');
-    var d = new Date();
-    var stamp = d.toISOString().slice(0,10);
-    a.href = url; a.download = 'MACAS_GoLive_Dashboard_backup_'+stamp+'.json';
-    document.body.appendChild(a); a.click(); document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  }
-
-  function importData(file){
-    if(!editEnabled){ alert('Unlock editing first (top-right Edit button) before importing a backup.'); return; }
-    var reader = new FileReader();
-    reader.onload = function(e){
-      try{
-        var data = JSON.parse(e.target.result);
-        Object.keys(data).forEach(function(k){
-          if(k.indexOf('macasGoLive_') === 0){ localStorage.setItem(k, data[k]); }
-        });
-        location.reload();
-      }catch(err){
-        alert('Could not read that file. Please choose a backup JSON exported from this dashboard.');
-      }
-    };
-    reader.readAsText(file);
-  }
-
-  function resetAll(){
-    if(!editEnabled){ alert('Unlock editing first (top-right Edit button) before resetting.'); return; }
-    if(!confirm('Reset every status light and comment on this device? This cannot be undone.')) return;
-    var keys = [];
-    for(var i=0;i<localStorage.length;i++){
-      var k = localStorage.key(i);
-      if(k.indexOf('macasGoLive_') === 0) keys.push(k);
-    }
-    keys.forEach(function(k){ localStorage.removeItem(k); });
-    location.reload();
-  }
-
   function reportHeight(){
     try{
       var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
-      if(window.parent && window.parent !== window){
-        window.parent.postMessage({ macasDashboardHeight: h }, '*');
-      }
+      if(window.parent && window.parent !== window){ window.parent.postMessage({ macasDashboardHeight: h }, '*'); }
     }catch(e){}
   }
 
   document.addEventListener('DOMContentLoaded', function(){
     setEditMode(false);
-    initLights();
-    initComments();
     initNav();
-    updateDashboard();
-    updateModuleBreakdown();
     document.getElementById('mgl-btn-edit').addEventListener('click', toggleEdit);
-    document.getElementById('mgl-btn-print').addEventListener('click', exportPdf);
-    document.getElementById('mgl-btn-export').addEventListener('click', exportData);
-    document.getElementById('mgl-btn-reset').addEventListener('click', resetAll);
-    document.getElementById('file-import').addEventListener('change', function(e){
-      if(e.target.files && e.target.files[0]) importData(e.target.files[0]);
-    });
-    reportHeight();
-    setTimeout(reportHeight, 500);
+    document.getElementById('mgl-btn-print').addEventListener('click', function(){ window.print(); });
+    document.getElementById('mgl-btn-refresh').addEventListener('click', loadData);
+    loadData();
     window.addEventListener('resize', reportHeight);
+    setTimeout(reportHeight, 800);
   });
 })();
 </script>
